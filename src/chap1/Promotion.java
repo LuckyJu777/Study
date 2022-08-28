@@ -11,13 +11,13 @@ char charData = (char)byteData; (o) //강제 타입 변환
 **/
 
 package chap1;
-pulic class Promotion {
+public class Promotion {
 	public static void main(String[] args) {
 		byte byteValue = 10;
-		int intValue = byteVaule; //int <-byte
-		Sytstem.out.println(intValue);
+		int intValue = byteValue; //int <-byte
+		System.out.println(intValue);
 		
-		char charVale = '가';
+		char charValue = '가';
 		intValue =charValue;
 		System.out.println("가의 유니코드 =" + intValue);
 		
