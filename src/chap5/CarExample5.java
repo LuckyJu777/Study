@@ -1,4 +1,4 @@
-package chap5;
+package chap5; //객체 생성시 생서자 선택!!
 public class CarExample5{
 	public static void main(String[] args) {
 		Car car1 = new Car();
