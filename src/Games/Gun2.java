@@ -55,7 +55,7 @@ import java.util.Scanner;
 		}else if (num == 2) {	
 			if(i == 0) { 
 				System.out.println("런~");
-				continue;
+				break;
 			}else {
 				System.out.println("런~~");
 				break;
