@@ -1,17 +1,25 @@
+package Games;	//이클립스 폴더와 깃허브폴더가 서로 다르기때문에 패키지 바꿔주기
+
 import java.util.Random;
 import java.util.Scanner;
 
-public class Gun{
+	public class Gun{
 	static Random random = new Random();	//랜덤으로 쏜다는 뜻인가용 
 	static int bullet;	//총알 메소드 
 	
-public static void main(String[] args) {
+	public static void main(String[] args) {
 	Scanner scanuser = new Scanner(System.in);	//사용자가 키보드에서 친 매개변수 스캔
+	scanuser = in.next();
+	int num;	//유저가 적은 매개변수 객체를 만들어준다.
+	//함수를 적을 때 순서가 있는지 궁금하다.
+	////num을 만드는게 좀 헷깔린다. 
+	//num은 if안에 들어가는 변수 
+	//num = scanuser.nextInt(); 스캔유저의 스캐너안의 nextlnt메소드를 이용해 값을 저장 num을 저장.
+	
 	int[] cylinder = { 0, 1, 2, 3, 4, 5 };			//실린더는 6개
 	int count = cylinder.length-1;	//랜덤총알을 하는 기능이 while문을 돌 때 1번씩 차감하는 변수
-	bullet = random.nextInt(cylinder.length); //불렛 = 랜덤.넥스트인트가(실린더.배열길이)
-	int num;	//유저가 적은 매개변수 객체를 만들어준다.
-				//함수를 적을 때 순서가 있는지 궁금하다.
+	bullet = random.nextInt(cylinder.length); //불렛 = 랜덤.넥스트인트(실린더.배열길이)
+	
 	System.out.println("러시안 룰렛에 오신 것을 환 영 환 영~");
 	
 	while(true) {
@@ -20,13 +28,12 @@ public static void main(String[] args) {
 		if(num == 1) {
 			System.out.println("게임시작");
 			System.out.println("당신은 스스로 머리에 총구를 겨냥하고 있습니다.");
-			playRoulette(num, count, bullet, cylinder, cylinder);	//메소드하고 객체들
+			playRoulette(num, count, bullet, cylinder, scanuser);	//메소드하고 객체들
 			break; //브레이크는 왜하는거지
-		}else if (num == 2) {
+		}else if (num <= 2) {
 			System.out.println("넌 못지나간다.");
-			coutinue;
 		} else {
-			System.out.println("지나갈까말까 지나갈까 말까 지 지 지 지 못지 나 가~");
+			System.out.println("지나갈까말까 지나갈까 말까 못 지나간다.");
 			continue;
 		}
 	}
@@ -65,5 +72,4 @@ public static void main(String[] args) {
 		}
 	}
 }
-
 
