@@ -1,4 +1,4 @@
-package Games;	//이클립스 폴더와 깃허브폴더가 서로 다르기때문에 패키지 바꿔주기
+package RouletteExample;	//이클립스 폴더와 깃허브폴더가 서로 다르기때문에 패키지 바꿔주기
 
 import java.util.Random;
 import java.util.Scanner;
@@ -9,12 +9,14 @@ import java.util.Scanner;
 	
 	public static void main(String[] args) {
 	Scanner scanuser = new Scanner(System.in);	//사용자가 키보드에서 친 매개변수 스캔
-	scanuser = in.next();
+//	scanuser = in.next();	in.next는 또 대체 뭔지
 	int num;	//유저가 적은 매개변수 객체를 만들어준다.
 	//함수를 적을 때 순서가 있는지 궁금하다.
 	////num을 만드는게 좀 헷깔린다. 
 	//num은 if안에 들어가는 변수 
 	//num = scanuser.nextInt(); 스캔유저의 스캐너안의 nextlnt메소드를 이용해 값을 저장 num을 저장.
+	//nextInt()와 in.next()의 차이
+	//num = scanuser.next(); 얘를 빼니까 돌아간다. 이게뭔 역할이지..?ㄴ
 	
 	int[] cylinder = { 0, 1, 2, 3, 4, 5 };			//실린더는 6개
 	int count = cylinder.length-1;	//랜덤총알을 하는 기능이 while문을 돌 때 1번씩 차감하는 변수
@@ -27,7 +29,7 @@ import java.util.Scanner;
 		num = scanuser.nextInt();
 		if(num == 1) {
 			System.out.println("게임시작");
-			System.out.println("당신은 스스로 머리에 총구를 겨냥하고 있습니다.");
+			System.out.println("당신은 스스로 머리에 총구를 겨냥하고 있습니다. 🤤🔫");
 			playRoulette(num, count, bullet, cylinder, scanuser);	//메소드하고 객체들
 			break; //브레이크는 왜하는거지
 		}else if (num <= 2) {
