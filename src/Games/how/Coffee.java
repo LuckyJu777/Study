@@ -6,3 +6,4 @@ public class Coffee {
 	int freshness = 5;
 	String menu = "Americano";
 }
+
