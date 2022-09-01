@@ -11,17 +11,27 @@ public class TicTactoe{
 		//사용자 입력값 받아오기
 		
 		Scanner scanner = new Scanner(System.in);		//노란색줄은 낭비가 발생한다는 뜻이다.
-		String inputString;	//inputString 객체생성
-		inputString = scanner.nextLine();	//next라인 메소드 호출 키보드로 입력한 문자열 얻음
+		int inputString;	//inputString 객체생성	:int 정수 !
+		inputString = scanner.nextInt();	//next라인 메소드 호출 키보드로 입력한 정수 얻음 ! 
 		
 		if(inputString == 1) {
 			System.out.println("시작!");
-			
+			PlayChart(board, scanner);
+			break;
+		}else {
+			System.out.println("끝");
+			continue;
 		}
-		System.out.println(inputString);
 		
-		
+	static class PlayChart {	//클래스 정의를 잘 모르겠다.
 	
+	int i = 0;
+	char[][] board; 
+	Scanner scanner;
+	String name;
+	
+	class Player(int i, char[][] board, Scanner scanner, String symbol)
+	System.out.println("33빙고입니다.");	
 	char[][] board = new char[4][4];	
 	board[0][0] = ' ';
 	board[0][1] = '1';
@@ -31,15 +41,22 @@ public class TicTactoe{
 	board[2][0] = 'b';
 	board[3][0] = 'c';
 	
-	for(int i =1; i< board.length; i++){
-		for(int j = 1; j<board.length; j++)
-		board[i][j] = '.';	//i는 1, i가 보드에 문자열을 인식, i가 증감한다)
-		}					//j는 1, j가 보드에 문자열을 인식, j가 증감한다)
-
+	//행에서의 승리조건
+	for(int i =1; i< board.length; i++) {
+		for(int j = 1; j<board.length; j++) {
+			if(!board[i][j].equals(symbol))
+				break;
+		}				
+		if (j == board.length)
+			return true;
+	}
 	
+	//열에서의 승리조건
+	
+	
+	//대각선에서 승리조건
 	}
-	}
-
+}
 
 
 		
