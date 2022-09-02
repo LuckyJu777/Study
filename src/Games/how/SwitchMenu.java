@@ -44,15 +44,17 @@ public class SwitchMenu{							//음식메뉴판
 			System.out.println("4. 카레와 난");
 			System.out.println("1번을 선택해주세요!");
 			
-//			{int user2;
-//			Scanner scanner = new Scanner(System.in);
-//			user2 = scanner.nextInt();
-//
-//			if(user2 == 1) {
-//				System.out.println("햄버거를 만들어드릴게요!");
-//				Menu2 myMenu2 = new Menu2;
-//				myMenu2.make();
-//			}break;
+			{int user2;
+			Scanner scanner = new Scanner(System.in);
+			user2 = scanner.nextInt();
+
+			if(user2 == 1) {
+				System.out.println("햄버거를 만들어드릴게요!");
+				Menu2 breadMenu1 = new Menu2();
+				breadMenu1.make();
+		
+			}
+			}break;
 			
 		case "면" :
 			System.out.println("잔치국수 및 한식");

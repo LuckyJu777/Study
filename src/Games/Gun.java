@@ -26,7 +26,7 @@ import java.util.Scanner;
 	
 	while(true) {
 		System.out.println("러시안 룰렛 한판 할래? 1.게임시작 2.게임 종료");
-		num = scanuser.nextInt();
+		num = scanuser.nextInt(); 
 		if(num == 1) {
 			System.out.println("게임시작");
 			System.out.println("당신은 스스로 머리에 총구를 겨냥하고 있습니다. 🤤🔫");
@@ -55,7 +55,7 @@ import java.util.Scanner;
 				System.out.println("사망");
 				break;
 			} else {
-				count--;	//카운트 차감
+				count--;	//카운트 차감1
 				System.out.println("살아남았다.");
 				i++;		//왜 변수가 증감되는거지
 			}
