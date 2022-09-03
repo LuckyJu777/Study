@@ -2,29 +2,20 @@
 //	필드, 생성자, 메서드 }
 
 package how;
-class Hoegaarden extends Get {
-	String type;
-	String model;
+	public class Beer{
+		public String type;
+		public String model;
 	
-	//생성자 (객체 값 세팅하기)
-	public Beer(String type, String model) {	 	 
+	void Beer() {	
 		this.type = type;
 		this.model = model;
 	}
 	
-	public void drink() {
+	void drink() {
 		System.out.println("마십니다.");
 	}
 	
-	public void mix() {
+	void mix() {
 		System.out.println("섞습니다.");
-	}
-	
-	public String getType() {
-		return type;
-	}
-	
-	public String getModel() {
-		return model;
 	}
 }
