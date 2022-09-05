@@ -1,4 +1,5 @@
-public class Parent{
+package chap6;
+public class Parent {
 	public void method1() {
 		System.out.println("Parent-method1()");
 	}
@@ -7,3 +8,4 @@ public class Parent{
 		System.out.println("Parent-method2()");
 	}
 }
+//자동 타입 변환 후의 멤버 접근

@@ -1,0 +1,8 @@
+public class TryCatchFinalyy{
+public static void main(String[] args){
+String data1 = null;
+String data2 = null;
+try{
+1data = args[0]);
+data2 = args[1];
+}catch{Array.out.println"
