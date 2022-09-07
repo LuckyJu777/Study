@@ -1,18 +1,53 @@
+import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Sum{//내가 입력한 값들을 적립하고 총합을 내는 함수
-public static void main(String[] args) {
-	boolean run = true;
-	
-	System.out.println("값을 입력하세요. 총합계값을 도출해드립니다.");
-	System.out.println("0을 누르면 종료합니다.");
-	while(run) {
-		// 이거를 배열로 받는다느 뜻아닌가?
-		// 여기 생성자로 사용자객체 배열을 받아서 합계하는걸 주고
-		//0을 입력하면 끝나는걸로 
-		for (int sums : sum)
-			System.out.println("i["+ sums +"] =" + sum);	
-		} 
+public class Sum{
+	public static void main(String[] args) {
+			// int 배열을 해보았지만 불규칙적인것은 어떻게 하지 못했따...
+			boolean run = true;
+			int sum = 0;
+			number
+				switch(run)
+				case 0 :
+					System.out.println("프로그램종료");
+					for(int i =0; i<number2.length; i++) {
+						sum += number2[i];
+						System.out.println(sum);
+				break;
+				
+				case 1 :
+				System.out.println("총 숫자를 넣을 갯수를 입력해주세요");
+				Scanner scanner  = new Scanner(System.in);	//배열 몇개 만들것인가?
+				int number = scanner.nextInt();
+				
+				System.out.println("숫자를 입력하세요.");
+				for(int i = 0; i<number; i++) {	//i가 증감
+				int[] arr = new int[number]; 	//틀만들기 i가 올라가면 
+				
+				Scanner scanner2  = new Scanner(System.in);	//데이터넣어주는 값
+				int number2 = scanner2.nextInt();	
+				arr[i] = number2;		//배열 안 데이터 넣어주기
+				System.out.println("arr[" +i+ "] =" + number2); 	//배열만보여주기
+				break;
+			}
+		}
 	}
-}
+				//0을 치면하면 프로그램 종료하면서, 내가 이때까지 입력한 값을 총합출력	
+//				System.out.println("프로그램종료");
+//				break;
+//				for(int i =0; i<number2.length; i++) {
+//					sum += number2[i];
+//					System.out.println(sum);
+//				}
+				
+	
 
+
+//				
+//			} else {
+//				System.out.println("프로그램종료2");	
+//				scanner.close();
+//				break;
+//			}
+//		}
+//	}
