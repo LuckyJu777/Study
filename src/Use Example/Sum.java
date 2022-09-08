@@ -1,53 +1,63 @@
-import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Sum{
 	public static void main(String[] args) {
-			// int 배열을 해보았지만 불규칙적인것은 어떻게 하지 못했따...
-			boolean run = true;
-			int sum = 0;
-			number
-				switch(run)
-				case 0 :
-					System.out.println("프로그램종료");
-					for(int i =0; i<number2.length; i++) {
-						sum += number2[i];
-						System.out.println(sum);
-				break;
-				
-				case 1 :
-				System.out.println("총 숫자를 넣을 갯수를 입력해주세요");
-				Scanner scanner  = new Scanner(System.in);	//배열 몇개 만들것인가?
-				int number = scanner.nextInt();
-				
-				System.out.println("숫자를 입력하세요.");
-				for(int i = 0; i<number; i++) {	//i가 증감
-				int[] arr = new int[number]; 	//틀만들기 i가 올라가면 
-				
-				Scanner scanner2  = new Scanner(System.in);	//데이터넣어주는 값
-				int number2 = scanner2.nextInt();	
-				arr[i] = number2;		//배열 안 데이터 넣어주기
-				System.out.println("arr[" +i+ "] =" + number2); 	//배열만보여주기
-				break;
+//		
+//				System.out.println("숫자를 입력하세요 하나의 배열안에 인덱스와 데이터값을 넣어드립니다.");
+//				Scanner scanner  = new Scanner(System.in);	
+//				
+//				List<Integer> list = new ArrayList<Integer>();			//Integer classtype(Wrapper) int 원시형변수
+//				
+//				boolean run = true;
+//				while(run) {				//루프
+//					int num = scanner.nextInt();	//num을 데이터 값
+//					if(num == 0) {					//num 데이터 값을 0 넣어주면
+//						run = false;				// 멈춘다
+//					}
+//					list.add(num);					// num 데이터 추가, 객체 번지 참조하여 리스트가 순차적으로 인덱스 안에 저장	
+//				}
+//			
+//				for(int i = 0; i < list.size(); i++) {	//배열만들기, 저장된 데이터의 수만큼 인덱스를 지정, 루핑하여 배열안에   
+//					System.out.println(list.get(i));	//인덱스안의 데이터를 찾기 
+//				}
+//	}
+//	
+//
+//	static void serve() {
+		System.out.println("숫자를 입력하세요 하나의 배열안에 인덱스와 데이터값을 넣어드립니다.");
+		Scanner scanner2  = new Scanner(System.in);	//SCANNER
+		
+			boolean run2 = true;
+			int[] chart2;
+			while(run2) {
+				int num2 = scanner2.nextInt();
+				if(num2 == 0) {
+					run2 = false;					
+				}
+			System.out.println(num2);					//number선언에 실패
+			for(int i = 0; i < num2.length; i++) {
+				System.out.println();
 			}
 		}
-	}
-				//0을 치면하면 프로그램 종료하면서, 내가 이때까지 입력한 값을 총합출력	
-//				System.out.println("프로그램종료");
-//				break;
-//				for(int i =0; i<number2.length; i++) {
-//					sum += number2[i];
-//					System.out.println(sum);
-//				}
+	}				
+}
 				
-	
-
-
-//				
-//			} else {
-//				System.out.println("프로그램종료2");	
-//				scanner.close();
-//				break;
-//			}
-//		}
-//	}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
