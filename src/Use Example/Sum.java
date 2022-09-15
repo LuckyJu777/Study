@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,18 +15,28 @@ public class Sum{
 			if(num == 0) {
 				run = false;
 			}
-			list.add(num);
-		}						//0을 치면 멈춘다.
-								//홀수의 총합 짝수의 총합 위의 리스트에서 걸러서 적용 
-								//break문 없이
-		int num = list.size();	//저장된 총 객체수 얻기 , 홀수와 짝수의 총 갯수 리스트 출력 
+			list.add(num);			//배열안에 데이터 넣어주기
+		}						
+
+		
+		int num = list.size();		//총 객체수
 		System.out.println("총 객체수는? " + list.size());
-		System.out.println(list.add(num));
 		
-		
+
 		for(int i = 0; i<list.size(); i++) {
-			int str = list.get(num);		// i 정의 해줬는데 왜 말안들어?
-			System.out.println("총 합계는?" + str);
+			int str = list.get(i);		
+			System.out.println("데이터 반환 - " + str);			//객체타입반환
+		}
+		
+			if(num % 2 == 1){					//조건문 홀수이면 => 홀수입니다.
+				System.out.println("홀수입니다.");
+				int i = 0;
+				int str1 = list.get(i);
+				System.out.println(":" + str1);
+				
+			}else {				//짝수이면 => 짝수입니다.
+				System.out.println("짝수입니다");
+				
 		}
 
 	

@@ -1,3 +1,4 @@
+import java.sql.Array;
 import java.util.Scanner;
 
 public class AllSum{
@@ -22,12 +23,18 @@ public class AllSum{
 					break;
 			case 1 :								//1을 누르면
 				System.out.println("배열의 사이즈");	//배열사이즈를 정한다
-				int size = scanner.nextInt();		//size 배열의 사이즈 데이터 값을 사영자가 입력한다.
+				int size = scanner.nextInt();		//size 배열의 사이즈 데이터 값을 사용자가 입력한다.
 				number = new int[size];				//size 데이터를 number 배열에 넣어준다.
 				System.out.println("들어갈 값을 넣어주세요.");
 				for(int i = 0; i<number.length; i++) {	//넘버 배열길이가 i보다 크다면 i증감 
 					number[i] = scanner.nextInt();		//i 매개변수를 적어준 두 값을 scanner로 받아옴 
 				}
+				
+		
+				
+			
+			case 2 : 
+				
 			}
 		}
 	}
