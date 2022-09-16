@@ -22,6 +22,12 @@ public class Sum{
 		int num = list.size();		//총 객체수
 		System.out.println("총 객체수는? " + list.size());
 		
+		int sum2 = 0;
+		int[] number2 = null;
+		for(int element : number2) {			//number 배열에 가져올 값이 존재하는지	-> element값에 저장한다. -> 실행문이 모두 실행되면 루프를 돌아  number에서 가져올 값이 있는지 본다.
+			sum2 += element;				
+			}
+			System.out.println(sum2);
 
 		for(int i = 0; i<list.size(); i++) {
 			int str = list.get(i);		
