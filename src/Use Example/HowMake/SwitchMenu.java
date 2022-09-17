@@ -38,10 +38,9 @@ public class SwitchMenu{							//음식메뉴판
 		
 		
 		case "빵" :
-			System.out.println("1. 햄버거 및 샌드위치베이글");
-			System.out.println("2. 스콘");
-			System.out.println("3. 파리바게트를 간다.");
-			System.out.println("4. 카레와 난");
+			System.out.println("1. 햄버거 ");
+			System.out.println("2. 샌드위치");
+			System.out.println("3. 카레와 난");
 			System.out.println("1번을 선택해주세요!");
 			
 			{int user2;
@@ -50,10 +49,9 @@ public class SwitchMenu{							//음식메뉴판
 
 			if(user2 == 1) {
 				System.out.println("햄버거를 만들어드릴게요!");
-				Menu2 breadMenu1 = new Menu2();
+				getMenu2 breadMenu1 = new getMenu2();
 				breadMenu1.make();
-		
-			}
+				breadMenu1.main();}
 			}break;
 			
 		case "면" :

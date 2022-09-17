@@ -1,4 +1,4 @@
-import java.util.Arrays;
+//배열입력 > 데이터입력 > 데이터 합산
 import java.util.Scanner;
 
 public class Sum3{
@@ -8,14 +8,13 @@ public class Sum3{
 		
 		int n = sc.nextInt();
 		int[] arr = new int[n];
-		
-		int[] sum;
+		int sum = 0;
 		
 		System.out.println("숫자를 입력해주세요.");
 		for(int i = 0; i<arr.length; i++) {
 			arr[i] = sc.nextInt();
 		}
-	
+		
 		for(int element : arr) {
 			sum += element;
 		}
@@ -23,6 +22,8 @@ public class Sum3{
 		sc.close();
 		
 		System.out.println(sum);
-		System.out.println(Arrays.toString(sum));
 	}
 }
+
+//배열입력 > 데이터입력 > 배열합산
+//배열합산을 어떻게 해, 배열은 그냥 정하면 끝인 배열인데.
