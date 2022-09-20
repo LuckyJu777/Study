@@ -8,6 +8,6 @@ public class Counter {
 	
 	@Override 
 	protected void finalize() throws Throwable {
-		System.out.println()no + "번 객체의 finalize()가 실행됨");
+		System.out.println(no + "번 객체의 finalize()가 실행됨");
 	}
 }
