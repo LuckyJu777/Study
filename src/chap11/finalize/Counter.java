@@ -1,3 +1,4 @@
+package finalize;
 public class Counter {
 	private int no;
 	
@@ -9,3 +10,4 @@ public class Counter {
 	protected void finalize() throws Throwable {
 		System.out.println()no + "번 객체의 finalize()가 실행됨");
 	}
+}
