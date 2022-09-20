@@ -1,3 +1,4 @@
+package deepclone;
 public class Car{
 	public String model;
 	

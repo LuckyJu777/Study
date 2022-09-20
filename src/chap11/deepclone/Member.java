@@ -1,3 +1,7 @@
+package deepclone;
+
+import java.util.Arrays;
+
 public class Member implements Cloneable{
 	public String name;
 	public int age;
@@ -14,7 +18,7 @@ public class Member implements Cloneable{
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
 		//먼저 얕은 복사를 해서 name, age를 복제한다.
-		Member cloned = (Member)super.clone();	//object의 clone() 호출
+		Member cloned = (Member) super.clone();	//object의 clone() 호출
 		//scores를 깊은 복제한다.
 		cloned.scores = Arrays.copyOf(this.scores, this.scores.length);
 		//car를 깊은 복제한다.

@@ -1,3 +1,4 @@
+package finalize;
 public class FinalizeExample {
 	public static void main(String[] args) {
 		Counter counter = null;
