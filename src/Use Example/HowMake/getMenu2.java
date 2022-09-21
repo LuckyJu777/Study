@@ -32,17 +32,15 @@ public class getMenu2{
 		for(int i=0; i<2; i++) {
 			
 		}
-		return 속재료.get(0) + 메인재료.get(0) + 치즈.get(0) + 야채.get(0)+ 소스.get(0) +소스.get(1);
+		return 속재료.get(0) + 메인재료.get(0) + 치즈.get(0) + 야채.get(0)+ 소스.get(0) +소스.get(0);
 		}
 	
-		public static void main(String[] args) {
+		public static void makeSanwich(String[] args) {
 		for(int i=0; i < 1; i++) {
 			if (i % 10 == 0) {
-			System.out.println();
 			}
 			System.out.println(make() + "샌드위치 햄버거 입니다.!");
 		} 
-		
 	}
 }
 		

@@ -1,8 +1,9 @@
 package how;
 
+import java.text.MessageFormat;
 import java.util.Scanner;
 
-public class SwitchMenu{							//음식메뉴판
+public class SwitchMenu extends getMenu2 {							//음식메뉴판
 	public static void main(String[] args) {		
 		System.out.println("밥 빵 면 중에 무엇을 드시겠습니까?");
 		Scanner in = new Scanner(System.in); //사용자 입력값 받아오기
@@ -38,29 +39,37 @@ public class SwitchMenu{							//음식메뉴판
 		
 		
 		case "빵" :
-			System.out.println("1. 햄버거 ");
-			System.out.println("2. 샌드위치");
-			System.out.println("3. 카레와 난");
+			System.out.println("1. 햄버거 샌드위치 ");
 			System.out.println("1번을 선택해주세요!");
 			
 			{int user2;
 			Scanner scanner = new Scanner(System.in);
 			user2 = scanner.nextInt();
-
+			
 			if(user2 == 1) {
-				System.out.println("햄버거를 만들어드릴게요!");
+				System.out.println("샌드위치 햄버거를 만들어드릴게요!");
 				getMenu2 breadMenu1 = new getMenu2();
-				breadMenu1.make();
-				breadMenu1.main();}
+				breadMenu1.makeSanwich(args);
+			}
 			}break;
 			
 		case "면" :
-			System.out.println("잔치국수 및 한식");
-			System.out.println("라멘 및 일식");
-			System.out.println("베트남 쌀국수 및 베트남식");
-			System.out.println("라면,우동,라볶이");
-			System.out.println("짜장면 짬뽕 및 중식");
-			System.out.println("스파게티 및 양식");
+			System.out.println("면을 먹으려는 당신 진심이군요. 상대방을 설득할 호소문을 작성해 드릴게요.");
+		
+			{int user3;
+			
+			System.out.println("무엇을 드시고 싶은가요? 메뉴만 적어주세요.");
+			Scanner scanner = new Scanner(System.in);
+			String user4 = scanner.nextLine();
+			
+			
+			String mymenu = user4;
+			String text = "좋아해 {0} \n멋진녀석 {0}...";
+			
+			String result1 = MessageFormat.format(text,mymenu);
+			System.out.println(result1);
+			System.out.println();
+		}	
 			break;
 		}
 	}
