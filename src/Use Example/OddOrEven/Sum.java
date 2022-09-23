@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -35,36 +34,31 @@ public class Sum{
 				int str2 = list.get(i);
 				if(str2%2!=0){
 				System.out.println("데이터 반환 - " + str2);
-				int str3 = odd_list.get(i);						//홀수를 배열안에 넣어준다.
-				odd_tot += str3;									//배열안의 데이터를 += 더하기더하기 해서 다른변수에 넣어주기
+				odd_tot += list.get(i);							//홀수를 배열안에 넣어준다.
 				odd_list.add(odd_tot);								//아니 여기서 막히면 어덕해유
 				}
 			}
-			System.out.println("홀수의 총합을 출력합니다." + odd_tot);
-			System.out.println(); 
+			System.out.println("홀수의 총합을 출력합니다. :  " + odd_tot);
+			System.out.println();
 			
 			System.out.println("입력한 짝수의 값을 출력합니다.");	//4 짝수 데이터 반환
 			for(int i = 0; i<list.size(); i++) {
 				int str3 = list.get(i);
 				if(str3%2 == 0){
 				System.out.println("데이터 반환 - " + str3);	
+				even_tot += list.get(i);
+				even_list.add(even_tot);
 				} 
-			}	
-			/*
-			 * System.out.println(); //Integer를 빼
-			 * System.out.println("입력한 값들 중 홀수값의 총 합계 리스트 출력"); for(int i = 0;
-			 * i<list.size(); i++) { int str4 = odd_list.get(i); //일단 배열 넣고 if(str4%2!=0){
-			 * //배열안에 홀수면 int num1 = odd_list.get(i); //5 홀수배열안에서 총 합계
-			 * 
-			 * } } System.out.println("홀수의 값 합계 입니다." + odd_list.size() );
-			 * System.out.println();
-			 */
-		 
-		
-		
-		
-		
-	
+			}
+			System.out.println("짝수의 총합을 출력합니다. :  " + even_tot);
+			System.out.println();
+
+			System.out.println("홀수의 총합과 짝수의 총합을 비교하여 큰 수를 출력합니다.");
+			if (odd_tot > even_tot) {
+				System.out.println("홀수");
+			} else {
+				System.out.println("짝수");
+			}
 		  }	
 	}
 
