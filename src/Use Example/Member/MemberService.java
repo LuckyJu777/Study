@@ -1,4 +1,4 @@
-package Member;
+package Member;		//id부터 한개씩 해보자
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +10,31 @@ public class MemberService { // class {}
 	String password;
 
 	//런을 찾는 생성자 초기화, 생성자 정의 호출 함수
-	public static void login(List<Integer> id_list, int print_type) { //method()
+	
+	public static void main(String[] args) {			//main method() {} 
+		System.out.println("아이디를 입력하세요.");
+		Scanner scanner = new Scanner(System.in);		//사용자 입력 가능
+		List<String> id_list = new ArrayList<String>();	//id 리스트 넣어줌
+		String ownerid = null;		//스트링에 값 넣기
+		
+		for(int i =0; i<1; i++) {	
+			ownerid = scanner.next();
+			break;
+		}
+		id_list.add(ownerid);		//리스트안에 아이디를 넣었어요~ 아니 이건 회원가입 창 아니냐 
+		
+		MemberService Ms = new MemberService();
+		Ms.loginId(ownerid, 1);
+	}
+
+	public void loginId(List<String> num_list, int name_type) { //method()
 		
 		String print_str = "";
+		name_type = "java";
 		
-		if(오늘 한건 없는데 삽질은 많이 했습니다. 근데 결과물은 없었습니다.== 3) {
+		if(name_type) {
 			print_str ="로그인";
-		} else if (number != 3){
+		} else if (id_list != name_type){
 			print_str =	"관리자 번호가 아닙니다.";
 		}
 		
@@ -25,25 +43,15 @@ public class MemberService { // class {}
 		}
 	}
 	
-	public static void main(String[] args) {			//main method() {} 
-		System.out.println("아이디와 비밀번호를 입력하세요.");
-		Scanner scanner = new Scanner(System.in);
+	public static void loginPw(List<Integer> PW_list, int print_type2) {
+		String print_str = "";
 		
-		List<String> id_list = new ArrayList<String>();	//id 리스트 넣어줌
-		List<String> pass_list = new ArrayList<String>();	// Password 리스트 넣어줌
-		String ownerid = null;		//스트링에도 값을 줘야해요~
-		
-		for(int i =0; i<1; i++) {
-			ownerid = scanner.next();
-			break;
+		if(print_type2 == 1234) {
+			print_str ="로그인";
+		} else if (print_type2 != 1234){
+			print_str =	"관리자 번호가 아닙니다.";
 		}
-		id_list.add(ownerid);
-
-		MemberService memberserivce = new MemberService();
-		MemberService.login("스트링값", 3);
-		MemberService.logout("스트링값");
-	}
-
+	}	
 	String logout(String id) { //메소드의 내용은 로그아웃 되었습니다. 가 출력되도로 해라
 		System.out.println("로그아웃 되었습니다.");
 		return id;
