@@ -16,14 +16,14 @@ public class Tv{
 	}
 	
 	void poweroff() {
-		//screen off
+		power =! power;
 	}
 	
 	void channelup() {
-		//channel change
+		channel++;
 	}
 	
 	void channeldown() {
-		//down
+		channel--;
 	}
 }

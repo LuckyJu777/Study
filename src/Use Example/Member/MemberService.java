@@ -1,61 +1,42 @@
-package Member;		//id부터 한개씩 해보자
+package Member;		
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-public class MemberService { // class {}
-
-	String id;
-	String password;
-
+														
+public class MemberService {
+	String ownerkeyname = "java";	
+	int ownerkeynumber = 3;
+//관리자 이름, 번호로 접속 할 수 있는 
+												        //사용자가 이름과 번호를 치면 	
+	                                                    //그 내용을 받아서 if문 에 이 번호랑 맞다면 접속
+														//아니라면 관리자의 이름이 맞지 않습니다.
 	//런을 찾는 생성자 초기화, 생성자 정의 호출 함수
 	
 	public static void main(String[] args) {			//main method() {} 
-		System.out.println("아이디를 입력하세요.");
+		System.out.println("관리자 이름을 입력하세요.");
 		Scanner scanner = new Scanner(System.in);		//사용자 입력 가능
-		List<String> id_list = new ArrayList<String>();	//id 리스트 넣어줌
-		String ownerid = null;		//스트링에 값 넣기
+		List<String>namelist = new ArrayList<String>();	//배열만들기 name
+		List<Integer>numberlist = new ArrayList<Integer>(); //배열만들기 number
 		
+		String ownernumber = "";							//음냐
 		for(int i =0; i<1; i++) {	
-			ownerid = scanner.next();
+			ownernumber = scanner.next();	//스트링 사용자 값
 			break;
-		}
-		id_list.add(ownerid);		//리스트안에 아이디를 넣었어요~ 아니 이건 회원가입 창 아니냐 
+		} 
+		namelist.add(ownernumber);
 		
-		MemberService Ms = new MemberService();
-		Ms.loginId(ownerid, 1);
-	}
+		if(true) {
+			namelist.get()= ownerkeynumber;
+		} else {
+			
+		}
+		Member Ms = new Member();			//if해서 튕겨내기 
+		Ms.name = "java";
+		Ms.number = 123;
+		
+		System.out.println("들어갔는지 확인" + Ms.name + Ms.number);
 
-	public void loginId(List<String> num_list, int name_type) { //method()
-		
-		String print_str = "";
-		name_type = "java";
-		
-		if(name_type) {
-			print_str ="로그인";
-		} else if (id_list != name_type){
-			print_str =	"관리자 번호가 아닙니다.";
-		}
-		
-		for(int i = 0; i<2; i++) {
-			System.out.println(print_str+ " : ");	
-		}
-	}
+}
 	
-	public static void loginPw(List<Integer> PW_list, int print_type2) {
-		String print_str = "";
-		
-		if(print_type2 == 1234) {
-			print_str ="로그인";
-		} else if (print_type2 != 1234){
-			print_str =	"관리자 번호가 아닙니다.";
-		}
-	}	
-	String logout(String id) { //메소드의 내용은 로그아웃 되었습니다. 가 출력되도로 해라
-		System.out.println("로그아웃 되었습니다.");
-		return id;
-		}
-  
- }
- 
+} 
