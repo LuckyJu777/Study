@@ -20,7 +20,8 @@ public class Beer{	//맥주 자판기
 		CanInfo caninfo = new CanInfo();	//여기 필드에서 만든 생성자객체이름은 caninfo(=>CanInfo연결)
 		caninfo.setName(beerInfo);
 		caninfo.setBeerflavor(beerInfo2);
-		caninfo.setBeerorigin(beerInfo3);
+		caninfo.setBeerorigin(beerInfo3);		//이 정보들을 묶어서 하나의 배열로 일단 셋팅해놓고 밑에서 받아서 저장하는
+		
 
 		caninfo.getName();//맥주이름 가져오기
 		caninfo.getBeerflavor();	//맥주맛가져오기
@@ -36,18 +37,18 @@ public class Beer{	//맥주 자판기
 		int answer = sc.nextInt();	//1번이나 2번을 answer에 담아서 
 		
 		Beer beer = new Beer();		//new beer 객체 생성자 만듬
-		beer.Save(userBeer,answer);		//여기서 비어 세이브메서드를 불러서 파라미터로 유저비어값과, 앤서 값을 만들어준다.
+		beer.Save(,answer);		//여기서 비어 세이브메서드를 불러서 파라미터로 유저비어값과, 앤서 값을 만들어준다.
 	}									//넘겨주면서 다시 호출해야하는거 아닌가 
 	
-	public void Save(ArrayList<CanInfo> userBeer, int print_type) { //저장메소드 생성 , 배열만들어주고 String print_str
-		ArrayList<String> beerlist = new ArrayList<String>();
+	public void Save(ArrayList<CanInfo> userBeer, int print_type) { //저장메소드 생성 , 배열만들어주고 배열안에 canInfo의 정보를 넣고싶음,
+		ArrayList<String> beerlist = new ArrayList<String>();	//beer 리스트 
 		System.out.println();
 		
 		if(print_type == 1) {
 			//userBeer.add(caninfo); 
 			System.out.println("저장되었습니다. 🍻 ");
-			System.out.println(userBeer);
-//			beerlist.add(userBeer);
+			System.out.println(userBeer);		//저장이 안되어있어서 안에 아무것도 들어있지않다.
+			
 		} else {
 			System.out.println("저장되지않았습니다.");
 		
