@@ -3,7 +3,7 @@ package someTea;
 public class CanInfo{
 	String name;
 	String beerflavor;
-	String beerbrand;
+	String beerorigin;
 	int CC;
 
 //	CanInfo(String name, String beerflavor, String beerbrand, int CC){
@@ -12,7 +12,9 @@ public class CanInfo{
 //		this.beerbrand = beerbrand;
 //		this.CC = CC;
 //	}
-
+//생성자를 생성한 후 그 객체 안에 추가적으로 데이터를 넣고싶음
+//생성자를 호출하지 않고도 setter getter를 사용하면 넣을 수 있다.
+	
 	public String getName() {
 		return name;
 	}
@@ -29,12 +31,12 @@ public class CanInfo{
 		this.beerflavor = beerflavor;
 	}
 	
-	public String getBeerbrand() {
-		return beerbrand;
+	public String getBeerorigin() {
+		return beerorigin;
 	}
 	
-	public void setBeerbrand(String beerbrand) {
-		this.beerbrand = beerbrand;
+	public void setBeerorigin(String beerorigin) {
+		this.beerorigin = beerorigin;
 	}
 
 	public int getCC() {
