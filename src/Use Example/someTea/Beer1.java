@@ -3,64 +3,80 @@ package someTea;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Beer1{	//맥주 자판기
-	public static void main(String[] args) {
-		ArrayList<CanInfo> userBeer = new ArrayList<>();
-		
-		System.out.println("수제맥주");
-		System.out.println("수제맥주 이름 등록하세요");
-		Scanner sc = new Scanner(System.in);
-		String beerInfo = sc.next();	//맥주이름넣기
-		System.out.println("맥주 맛을 등록하세요");
-		String beerInfo2 = sc.next();
-		System.out.println("맥주 생성지를 등록하세요");
-		String beerInfo3 = sc.next();
-		
-		CanInfo caninfo = new CanInfo();	//여기 필드에서 만든 생성자객체이름은 caninfo(=>CanInfo연결)
-		caninfo.setName(beerInfo);
-		caninfo.setBeerflavor(beerInfo2);
-		caninfo.setBeerorigin(beerInfo3);		//이 정보들을 묶어서 하나의 배열로 일단 셋팅해놓고 밑에서 받아서 저장하는
-		
-		userBeer.add(caninfo);		
-
-		caninfo.getName();//맥주이름 가져오기
-		caninfo.getBeerflavor();	//맥주맛가져오기
-		caninfo.getBeerorigin(); //맥주국적쓰	=> 배열 만들어서 맥주정보 넣어주기 해보기
+public class Beer1 { // 맥주 자판기
+	private ArrayList<CanInfo> userBeer = null;	//리스트 CanInfo객체 넣어주기
+	private ArrayList<String> beer_list = null;
+	private Scanner sc = null;
+	
+	private String name;
+	private String A = "N";
+	private int B = 1;
+	static boolean run = true;
+	boolean find = true;
+	
+	Beer1(){	//함수만들기
+		userBeer = new ArrayList<>();	//userBeer
+		beer_list = new ArrayList<>();
+		sc = new Scanner(System.in);
+	}	 
+	
+	void PutBeerInfo() {		//맥주 넣기
+		while (run) {
+			System.out.println("1.맥주이름 2.맥주맛 3.생성지");
+			String beerInfo = sc.next();
+			String beerInfo2 = sc.next();
+			String beerInfo3 = sc.next();
+			CanInfo caninfo = new CanInfo(beerInfo, beerInfo2, beerInfo3);	//CanInfo객체 데이터 넣어주기
+			userBeer.add(caninfo);	//userBeer <CanInfo>객체에 리스트로 싸서 넣어주기 
+			
+			System.out.print(" 계속 입력하시겠습니까? ( Y : 계속 ,  N : 종료 ) ");
+			String beerInfo4 = sc.next();
+			Stop(beerInfo4);
+		}
+	}	
+			
+	public void Stop(String A) {
+		if (A == "N") {
+			for (int i = 0; i < userBeer.size(); i++) { // userBeer.size로 해서
+				CanInfo caninfo = userBeer.get(i); // CanInfo 클래스의 변수명 caninfo로 해서 userBeer안에
+			} // 객체 리스트 만큼 get(i)번으로 돌려서 넣어준다.
+		}run = false; 
+		System.out.println("완료");
+	}
+	
+	void LookUpBeer(CanInfo canInfo) {	//조회
 		System.out.println("🍺당신이 만든 수제맥주🍺");
 		System.out.println("--------------------");
-		System.out.println("내가 만든 수제맥주의 상품명은 <" + caninfo.getName() + "> 입니다.");
-		System.out.println("맥주의 맛 종류는 <" + caninfo.getBeerflavor() + "> 을(를) 선택하셨습니다.");
-		System.out.println("이 맥주의 생성지는 <" + caninfo.getBeerorigin() + "> 입니다.");
-		//맥주정보 저장
-		System.out.println("\t 이 정보를 저장하시겠습니까?");	//객체배열에 담아주겠습니까?
-		System.out.println("1.예 / 2.아니오");
-		int answer = sc.nextInt();	//1번이나 2번을 answer에 담아서 
+		System.out.println("내가 만든 수제맥주의 상품명은 <" + canInfo.getName() + "> 입니다.");
+		System.out.println("맥주의 맛 종류는 <" + canInfo.getBeerflavor() + "> 을(를) 선택하셨습니다.");
+		System.out.println("이 맥주의 생성지는 <" + canInfo.getBeerorigin() + "> 입니다.");
+		System.out.println("검색할 생산지 이름을 입력하세요. ");
+		String sch_location = sc.next(); // 만약 영국이라고 쳤으면?
 		
-									//new beer 객체 생성자 만듬
-									//여기서 비어 세이브메서드를 불러서 파라미터로 유저비어값과, 앤서 값을 만들어준다.
-	}								//넘겨주면서 다시 호출해야하는거 아닌가 
+		if(find){
+			System.out.println("생산지 : 영국 에 해당하는 맥주 출력");
+			canInfo.getBeerorigin(); 										//객체안에 있는 생성지 정보가 
+		}
+	}
+	 
 	
-	public void Save(ArrayList<CanInfo> userBeer, int print_type) { //저장메소드 생성 , 배열만들어주고 배열안에 canInfo의 정보를 넣고싶음,
-		ArrayList<String> beerlist = new ArrayList<String>();	//beer 리스트 
-		System.out.println();
+	void Find(ArrayList<CanInfo>userBeer2, String origin) {
+		String print_C = "";
 		
-		if(print_type == 1) {
-//			caninfo.add(); 
-			System.out.println("저장되었습니다. 🍻 ");
-			System.out.println(userBeer);		//저장이 안되어있어서 안에 아무것도 들어있지않다.
+		if(origin == "한국") {
 			
-		} else {
-			System.out.println("저장되지않았습니다.");
-		
-		}	
-	} 
+//		}else if(origin == "독일") {
+//			
+//		}else if(origin == "일본") {
+//			
+//		}else if(origin == "미국") {
+//			
+//		}else if(origin == "벨기에"){
+//			
+//		}else if(origin == "중국") {
+//			
+//		}else if(origin == "체코") {
+//			
+//		}else if(origin == "아일랜드");
+	}
 }
-//1. 객체를 리스트에 넣어주기
-
-/*
- * String country = "영국";
- * //YES라고 하면 CANINFO정보 불러와서 영국대조 맞으면 쭉 정보 내보내기 if() {
- * } else {
- * 
- * }
- */
