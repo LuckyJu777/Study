@@ -9,33 +9,33 @@ public class OrigiN extends CanInfo{
 		}
 	}
 	
-//	public void Germany() {
-//		
-//	}
-//	
-//	public void Japan() {
-//		
-//	}
-//	
-//	public void Us() {
-//		
-//	}
-//	
-//	public void Belgium() {
-//		
-//	}
-//	
-//	public void China() {
-//		
-//	}
-//	
-//	public void Czechia() {
-//		
-//	}
-//	
-//	public void Ireland() {
-//		
-//	}
-//	
+	public void Germany() {
+		
+	}
 	
+	public void Japan() {
+		
+	}
+	
+	public void Us() {
+		
+	}
+	
+	public void Belgium() {
+		
+	}
+	
+	public void China() {
+		
+	}
+	
+	public void Czechia() {
+		
+	}
+	
+	public void Ireland() {
+		
+	}
+	
+
 }
