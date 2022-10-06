@@ -22,7 +22,14 @@ public class Beer1 { // 맥주 자판기
 	void call() {
 		System.out.println("1.등록 및 종료 2.조회");
 		int main = sc.nextInt();
-
+		
+		if(main != 1) {
+			System.out.println("보기를 입력하세요.");
+		}else if (main != 2){
+			System.out.println("보기 중 입력하세요.");
+		} 
+		return main;
+		
 		switch (main) {
 		case 1:
 			PutBeerInfo();
@@ -65,13 +72,11 @@ public class Beer1 { // 맥주 자판기
 		System.out.println("---------------------------------\t");
 
 	}
-	//계속 73,74번째 줄이 문제라고 합니다..
-	// 또 새생성자를 불러와야하나?
-	@SuppressWarnings("unlikely-arg-type")
+	//뭐가 문제니 
 	void Find(ArrayList<CanInfo> userBeer2, String location_list) {
 		// get비어생성지안의 문자열이 로케이션 리스트와 같다면
-		if (userBeer.get(//아니 여기 뭐들어가야하냐고()).equals(location_list)) {
-			System.out.println(userBeer.toString()); 
+		if (beerInfo().equals(location_list)) {
+			System.out.println(); 
 		} else if (location_list == "독일") {
 			System.out.println("독일맥주");
 		} else if (location_list == "일본") {
