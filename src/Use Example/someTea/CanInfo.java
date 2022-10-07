@@ -1,9 +1,9 @@
 package someTea;
 
 public class CanInfo {
-	String name;
-	String beerflavor;
-	String beerorigin;
+	private String name;
+	private String beerflavor;
+	private String beerorigin;
 
 	CanInfo() {
 
@@ -22,9 +22,6 @@ public class CanInfo {
 		this.setName(name);
 		this.setBeerflavor(beerflavor);
 		this.setBeerorigin(beerorigin);
-		this.getName();
-		this.getBeerflavor();
-		this.getBeerorigin();
 
 	}
 
