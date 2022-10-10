@@ -1,19 +1,17 @@
 package Test;
 
 public class ArrayLT{
-	private String first;
+	private int first;
 	private int second;
-	private char third;
-	private boolean fourth;
 	
 	ArrayLT(){
 		
 	}
 	
-	ArrayLT(String first){
+	ArrayLT(int first){
 		this();
 	}
-	public String getMain() {	
+	public int getMain() {	
 		return first;
 	}
 	
@@ -21,24 +19,10 @@ public class ArrayLT{
 		return second;	//스트링으로 second 반환
 	}
 	
-	public char getthird() {
-		return third;
-	}
-	
-	public boolean getfourth() {
-		return fourth;
-	}
-	
-	public void setMain(String first) {
+	public void setMain(int first) {
 		this.first = first;
 	}
 	public void setServe(int second) {
 		this.second = second;
-	}
-	public void setthird(char third) {
-		this.third = third;
-	}
-	public void setfourth(boolean fourth) {
-		this.fourth = fourth;
 	}
 }
