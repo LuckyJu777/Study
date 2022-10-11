@@ -5,10 +5,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayNandom{
-	private ArrayList<ArrayLT> List = null;
+	private ArrayList<Integer> List = null;
+	private ArrayList<Integer> N_List = null;	//배열 안 객체 넣지않고 getter setter 쓰지않기
+	private ArrayList<Integer> 	odd_Array = null;
+	private ArrayList<Integer> even_Array = null;
 	private static ArrayLT Nandom = null;
 	private static Scanner sc = null;
 	private static Random rd = null;
+	private int odd_N = 0;	//위에 안쓰이는 코드들 좀 지우기
+	private int even_N = 0;
 	private int sum;
 	static boolean run = true;
 	String A = "0";
@@ -17,30 +22,44 @@ public class ArrayNandom{
 	
 	void L1(){
 		List = new ArrayList<>();
-		ArrayLT Nandom = new ArrayLT();
 		sc = new Scanner(System.in);
 		rd = new Random();
+	
 	}
 	
-	void L2() {		//N개의 랜덤함수를 입력받고 > 무작위로 수 넣어주기 (난수생성)
+	public int L2() {		//N개의 랜덤함수를 입력받고 > 무작위로 수 넣어주기 (난수생성)
 		System.out.println("N개의 랜덤함수");
 		int Enter1 = sc.nextInt();
 		System.out.println("<"+ Enter1 +"> 개의 랜덤함수");
-		L3(Enter1); 
+		L3(Enter1);
 	}
 	
 	void L3(int Enter1) {	//랜덤함수
 		for(int i =0; i<Enter1; i++) {
-			System.out.println("[" + (rd.nextInt(45)+1)+"]");	//1~
-//			System.out.println("[" + ((int)(Math.random()*5)+1)+"]");	//1~
-			ArrayLT A1= new ArrayLT();
-			A1.setMain(Enter1);	//입력받기
-			List.add(A1);
-			System.out.println(List.toString());//담기는거 확인
-		}
+			 int N = ((int)(rd.nextInt(45)+1));
+			 List.add(N);
+		} 
+		System.out.println(List.toString());	//출력
 	}
 	
-	void L4(ArrayList<ArrayLT> N_List, int print_type) {	//홀수의 N개가 있다. > 아니 홀수와 짝수를 리스트로 받아줘야 댐
+	public void L4() {	//L4리스트받음 파라미터로
+		int size = List.size();
+		for(int i = 0; i<size; i++) {
+			int num1 = List.get(i);	//int num은 n_List.get주소 불러오기
+			System.out.println("반환" + num1);	//반환4까지는 됨
+			
+			if(num1%2!=0) {	//if만약 num1은 홀수라면
+				num1 += List.get(i);	//int odd N은 주소값 할당까지 넣어줌
+				odd_Array.add(num1);	//oddArray는 add로 해서 num1넣어줌
+			} else {
+				num1 += List.get(i);
+				even_Array.add(num1);
+			}
+		}L5(odd_Array,1); 
+		L5(even_Array,2);
+	}
+	
+	public void L5(ArrayList<Integer> List, int print_type) {	//홀수의 N개가 있다. > 아니 홀수와 짝수를 리스트로 받아줘야 댐
 		 String print_str = "";
 		 
 		 if(print_type == 1) {
@@ -50,13 +69,11 @@ public class ArrayNandom{
 		 }
 		 
 		 int size = N_List.size();
-		 for(int i = 0; i<size; i++) {
-			 int size = .get(i);
-			 
+		 for(i = 0; i<size; i++) {
+			 int str = N_List.get(i);
+			 System.out.println(print_type + " : " + str);
 		 }
-		
-		
-
+		 System.out.println();
 	}
 
 	
