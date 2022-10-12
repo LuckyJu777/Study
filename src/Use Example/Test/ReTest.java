@@ -1,22 +1,12 @@
 package Test;
 
-public class ReTest{
-	int multiply(int x, int y) {
-		int result = x * y ;
-		
-		return result;
-	}
-	
-	int max(int a, int b) {
-		if(a<b) {
-			return a;
-		} else {
-			return b;
-		}
-	}
-	
+public class ReTest {
 	public static void main(String[] args) {
-		double sum = multiply(x,y);
-		ReTest.max();
+		ReTest test = new ReTest();	//메인 클래스 객체 만들고
+		test.testMethod(300);	//객체변수이름.파라미터넣고싶은 메소드 ( 파라미터) ;
 	}
-}//https://dustink.tistory.com/47 
+	
+	public void testMethod(int age) { //메소드 만들고 파라미터로 이거 받아여~ 공고
+		System.out.println("당신의 나이는" + age + "세 입니다.");	//당신의 나이는 ~세
+	}
+}		//근데 이게 리턴임???? 걍 값 받는거넹
