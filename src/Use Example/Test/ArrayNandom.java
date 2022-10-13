@@ -6,20 +6,18 @@ import java.util.Scanner;
 
 public class ArrayNandom {
 	private ArrayList<Integer> List = new ArrayList<Integer>();
-	private ArrayList<Integer> N_List = new ArrayList<Integer>(); // 배열 안 객체 넣지않고 getter setter 쓰지않기
 	private ArrayList<Integer> odd_Array = new ArrayList<Integer>();
 	private ArrayList<Integer> even_Array = new ArrayList<Integer>();
 	private static Scanner sc = null;
 	private static Random rd = null;
 
 	private int num1 = 0; // L3
-	private int odd_N = 0; // 위에 안쓰이는 코드들 좀 지우기
-	private int even_N = 0;
-	private int sum;
+	private static int sum = 0;
+	private static int odd_sum = 0;
+	private static int even_sum = 0; // even이 홀수야
 
 	void L1() {
 		List = new ArrayList<Integer>();
-		N_List = new ArrayList<Integer>();
 		odd_Array = new ArrayList<Integer>();
 		even_Array = new ArrayList<Integer>();
 		sc = new Scanner(System.in);
@@ -32,71 +30,83 @@ public class ArrayNandom {
 		System.out.println("<" + Enter1 + "> 개의 랜덤함수");
 
 		ArrayNandom test = new ArrayNandom();
-		test.L3(Enter1);
+		test.L3(Enter1); // 호출
 	}
 
 	public void L3(int Enter2) { // Enter2에는 들어감
 		for (int i = 0; i < Enter2; i++) {
 			List.add((int) (rd.nextInt(100) + 1));
 		}
-		
-		System.out.println(List.toString());
-		L4(List);
+
+		System.out.println("출력확인용L3" + List); // List에 잘 들어왔
+		L4(List); // 호출
 	}
 
 	// 자 여기까지는 됐어
-	public void L4(ArrayList<Integer> N_List) {
-	
-		int size = N_List.size(); // 값 받았으니까 뭐라도 처 나오는거겠지 됐다 일단 문제해결했다 근데 오 ㅐ저렇게 나옴
+	public void L4(ArrayList<Integer> List) {
+		System.out.println("출력확인용L4 " + List); // List에 잘 들어왔
+
+		int size = List.size();
 		for (int i = 0; i < size; i++) {
-			num1 = N_List.get(i); // 해당주소값 만약 i 1이라면
+			num1 = List.get(i);
+			sum += num1; // 리스트 총 합계 sum 값~
 
-			if (num1 % 2 == 0) { // if만약 num1은 홀수라면
-				odd_Array.add(num1); // oddArray는 add로 해서 num1넣어줌
+			if (num1 % 2 == 0) {
+				odd_sum += List.get(i); // 아니이거 for문을 또 만들어야 하나
+				odd_Array.add(num1);
 			} else if (num1 % 2 != 0) {
-				even_Array.add(num1); // 이거 오류 났던 이유가 null값 넣어줘서 새 배열을 못만들고
+				even_sum += List.get(i);
+				even_Array.add(num1); // 홀수~
 			}
-
 		}
 
-		System.out.println(odd_Array); // 그리고 이건 왜 입력이 안되는거지?
-		System.out.println(even_Array); // 음..
-		L5(odd_Array, 1);
-		L5(even_Array, 2);
+		L5(odd_Array, 1); // 어떻게 되냐면 저기로 값을 넣어주고 여기서 당장 실행
+		L5(even_Array, 2); // 실행 구문을 다 돌고 나온다음에 다음 줄 실행
+
+		System.out.println("odd랑 even배열L5 > 호출 끝 L4");
+		System.out.println("");
+
+		L6(odd_Array, even_Array);
+		L8(odd_Array, even_Array);
 	}
 
-	public void L5(ArrayList<Integer> List, int print_type) { // 홀수의 N개가 있다. > 아니 홀수와 짝수를 리스트로 받아줘야 댐
+	public void L5(ArrayList<Integer> N_Array, int print_type) { // 홀수의 N개가 있다. > 아니 홀수와 짝수를 리스트로 받아줘야 댐
 		String print_str;
 
 		if (print_type == 1) {
 			print_str = "짝수";
-			System.out.println(print_str);
+			System.out.println(N_Array + " : " + print_str);
 		} else if (print_type == 2) {
 			print_str = "홀수";
-			System.out.println(print_str);
-		}
-
-		System.out.println(List);
-		int size = N_List.size();
-		for (int i = 0; i < size; i++) {
-			int str = N_List.get(i);
-			odd_Array.add(str);
+			System.out.println(N_Array + " : " + print_str);
 		}
 	}
 
-	void L6() { // 홀수의 합은 N개 이다.
-		ArrayNandom dom2 = new ArrayNandom();
-
-		System.out.println("출력확인");
+	void L6(ArrayList<Integer> O_Array, ArrayList<Integer> E_Array) {// 홀수 혹은 짝수의 총 배열사이즈 값은 N 입니다.
+		System.out.println("odd 사이즈 출력 확인 : " + O_Array.size()); // 홀짝 값
+		System.out.println("even 사이즈 출력 확인 : " + E_Array.size());
 	}
 
-	// 짝수의 합은 N 입니다.
+	void L7() {
+		System.out.println("리스트 총 합계 sum 값 :  " + sum);
+		System.out.println("짝수 총 합계 odd_sum 값 :  " + odd_sum);
+		System.out.println("홀수 총 합계 even_sum 값 :  " + even_sum);
+	}
 
-	void L7() { // 짝수 or 홀수가 더 큽니다.
+	void L8(ArrayList<Integer> O_Array, ArrayList<Integer> E_Array) { // 문자열 비교하여 더 큰 데이터양 출력
+		if (O_Array.equals(E_Array)) {
+			System.out.println("홀수의 배열길이가 더 큽니다.");
+		} else {
+			System.out.println("짝수의 배열길이가 더 큽니다.");
+		}
 
 	}
 
-	void L8() { // 총 수의 합은 N입니다.
-
+	void L9() { // 홀수 총합 짝수 총합 비교
+		if (odd_sum > even_sum) {
+			System.out.println("짝수의 총 합이 더 큽니다.");
+		} else {
+			System.out.println("홀수의 총합이 더 큽니다.");
+		}
 	}
 }
