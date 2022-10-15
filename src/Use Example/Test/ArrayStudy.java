@@ -10,20 +10,24 @@ public class ArrayStudy {
 		ArrayRandom ArrayRandom = new ArrayRandom();
 		ArrayRandom.constructor_maker();
 		ArrayRandom.input_Number();
-		ArrayRandom.input_RandomNum();
+		ArrayRandom.input_RandomNumber();
+		ArrayRandom.process_Name();
+		ArrayRandom.return_List();
 	}
 }
-////N개의 수를 입력받아서 리스트에 랜덤 함수를 이용해서 담는다.
-////화면에 리스트로 출력 받기!
-////띄워주기!
-////홀수의 N개가 있습니다
-////홀수의 합은 N개 입니다
-////짝수 N개가 있습니다.
-////짝수의 합은 n입니다
-////짝수 or 홀수가 더 큽니다
-////총 수의 합은 N입니다.
 
-//		
+
+//N개의 수를 입력받아서 리스트에 랜덤 함수를 이용해서 담는다.
+//화면에 리스트로 출력 받기!
+//띄워주기!
+//홀수의 N개가 있습니다
+//홀수의 합은 N개 입니다
+//짝수 N개가 있습니다.
+//짝수의 합은 n입니다
+//짝수 or 홀수가 더 큽니다
+//총 수의 합은 N입니다.
+
+
 //		System.out.println("리스트를 넘겨서 출력하기");
 //		ArrayList<Integer> even_list = new ArrayList<>();
 //		dom1.get_find_num_list(0 , even_list);
@@ -45,7 +49,7 @@ public class ArrayStudy {
 //		for(Integer n_num : even_list3) {
 //			System.out.println(n_num);
 //		}
-//		
+
 //		/*
 //		int sum3 = dom1.getSum();
 //		System.out.println("sum3 = " + sum3);
@@ -56,13 +60,12 @@ public class ArrayStudy {
 //		int sum1 = dom2.getSum();
 //		System.out.println("sum1 = " + sum1);
 //		System.out.println("sum2 = " + sum2);
-//		*/
+
 // static memory상 저장
 // 모든 클래스의 변수가 참조
 //N개의 수를 입력받아서 리스트에 랜덤 함수를 이용해서 담는다.
 //화면에 리스트로 출력 받기!
 //띄워주기!
-//
 //홀수의 N개가 있습니다
 //홀수의 합은 N개 입니다
 //짝수 N개가 있습니다.
