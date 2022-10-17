@@ -1,20 +1,44 @@
 package Test;
 
-import java.util.ArrayList;
-
 //import java.util.ArrayList;
 
 public class ArrayStudy {
 	public static void main(String[] args) {
-
-		ArrayRandom ArrayRandom = new ArrayRandom();
-		ArrayRandom.constructor_maker();
-		ArrayRandom.input_Number();
-		ArrayRandom.input_RandomNumber();
-		ArrayRandom.process_Name();
-		ArrayRandom.return_List();
+		ArrayRandom Masterkey = new ArrayRandom();
+		Masterkey.input_Name();
+		
+		DataName Test0 = new DataName();
+		Test0.timeStamp();
+		
 	}
 }
+
+//내가 가지고 있는 함수는 
+//inputNumber = 랜덤생성 배열입력
+//inputRandom = 배열에 랜덤값을 넣어줌
+//get_find_num_list = even_list 해서  홀수배열 넣어주기 local_Array
+//get_find_odd = local_odd_Array로 해서 뭐 .. 뭐넣어주지 위에꺼랑 find_type다름.
+//conbineConst = 
+
+
+
+//ArrayRandom ArrayRandom_A = new ArrayRandom();
+//ArrayRandom_A.inputNumber();
+//ArrayRandom_A.get_find_odd();
+//
+//int sum3 = ArrayRandom_A.getSum();	//getsum의 sum리턴값 불러와서
+//System.out.println("sum3 = " + sum3);
+//
+//ArrayRandom ArrayRandom_B = new ArrayRandom();	//새생성자
+//int sum1 = ArrayRandom_B.getSum();	//새생성자를 해서 getSum을 불러오면 안볼러와진다..
+//int sum2 = ArrayRandom_B.getSum();	//왜?
+//
+//System.out.println("sum1 = " + sum1);	//sum1
+//System.out.println("sum2 = " + sum2);
+//
+//ArrayRandom ArrayRandom_C = new ArrayRandom();
+//ArrayRandom_C.call_Name();
+
 
 
 //N개의 수를 입력받아서 리스트에 랜덤 함수를 이용해서 담는다.
@@ -25,41 +49,7 @@ public class ArrayStudy {
 //짝수 N개가 있습니다.
 //짝수의 합은 n입니다
 //짝수 or 홀수가 더 큽니다
-//총 수의 합은 N입니다.
-
-
-//		System.out.println("리스트를 넘겨서 출력하기");
-//		ArrayList<Integer> even_list = new ArrayList<>();
-//		dom1.get_find_num_list(0 , even_list);
-//		
-//		for(Integer n_num : even_list) {
-//			System.out.println(n_num);
-//		}
-//		
-//		System.out.println("리스트를 넘겨서 출력하기");
-//		ArrayList<Integer> even_list2 = new ArrayList<>();
-//		ArrayList<Integer> even_list3 = dom1.get_find_num_list(0 , even_list2);
-//		
-//		System.out.println("파라메타로 넘긴 데이타 확인");
-//		for(Integer n_num : even_list2) {
-//			System.out.println(n_num);
-//		}
-//		
-//		System.out.println("파라메타로 넘긴 결과값 확인");
-//		for(Integer n_num : even_list3) {
-//			System.out.println(n_num);
-//		}
-
-//		/*
-//		int sum3 = dom1.getSum();
-//		System.out.println("sum3 = " + sum3);
-//		
-//		ArrayNandom dom2 = new ArrayNandom();
-//
-//		int sum2 = dom1.getSum();
-//		int sum1 = dom2.getSum();
-//		System.out.println("sum1 = " + sum1);
-//		System.out.println("sum2 = " + sum2);
+//총 수의 합은 N입니다..
 
 // static memory상 저장
 // 모든 클래스의 변수가 참조
@@ -86,3 +76,13 @@ public class ArrayStudy {
 // 그리고 너무 좋은 꿀팁 실행흐름을 모르는것이기 떄문에 어디서 삐꾸났는지 모르는것
 // 흐름을 파악하기 위해선 어느부분에서 출력을 해줘라!
 // 위에 붙일수도 있다!1을 떼서 1에 붙여서 넣어주고 또 1넣어주고 1>2>3 으로 가지수가 나뉠수 있다
+
+
+//자 setter는 private 변수값을 변경하는 메서드
+//getter는 private 변수값을 출력하는 메서드
+//자식 클래스의 객체변수 x를 뜻한다 => this. 자식클래스의 객체변수 x를 뜻하고 
+//super 조상 클래스에 선언된 인스턴스 변수 x를 뜻한다. 
+//내가 넣고 싶은 파라미터에 생성자 만들고 암것도 안해도 실행되고 실행시킬 수 있게 한다면 기본클래스
+//거기 넣어주고 void해서 파라미터값을 받고 안에 this.set을 하면 
+//set함수를 불러와서 실행시킨다. 그래서 함수하나 시켜놓고 리턴값 넣어주고
+//this부르면 위에 

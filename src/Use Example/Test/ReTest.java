@@ -9,4 +9,8 @@ public class ReTest {
 	public void testMethod(int age) { //메소드 만들고 파라미터로 이거 받아여~ 공고
 		System.out.println("당신의 나이는" + age + "세 입니다.");	//당신의 나이는 ~세
 	}
+	
+	public void returning_Test() {
+		
+	}
 }		//근데 이게 리턴임???? 걍 값 받는거넹
