@@ -18,8 +18,15 @@ public class ArrayStudy {
 //inputRandom = 배열에 랜덤값을 넣어줌
 //get_find_num_list = even_list 해서  홀수배열 넣어주기 local_Array
 //get_find_odd = local_odd_Array로 해서 뭐 .. 뭐넣어주지 위에꺼랑 find_type다름.
-//conbineConst = 
-
+//conbineConst = 리스트 총 합계 sum 값! findDefalt,bigLength,decisionLength 로 값을 뿌려줌
+//findDefalt = 1값을 넣어줘서 , findDefalt값으로 1로 넣어줌
+//bigLength = 배열길이 비교해서 홀수의 배열길이 짝수의 배열길이 더 큰것 비교
+//decisionLength = 사이즈 출력확인
+//allsum = 리스트 총 합계 sum, odd_sum, even_sum값 출력
+//compare = 짝수의 총 합이 더 크다.
+//getSum = sum 값 리턴
+//call_Name = 리턴할 때 무언가 함수기능 추가해서 넣어주거나 받아올떄 무슨 장치같은걸 만든 다음 꼬아서 받아와보기
+//input_Name = 관리자이름 숫자키 받아오는 함수 데이터
 
 
 //ArrayRandom ArrayRandom_A = new ArrayRandom();

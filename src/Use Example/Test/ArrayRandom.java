@@ -164,37 +164,59 @@ public class ArrayRandom {
 			System.out.println("홀수의 총합이 더 큽니다.");
 		}
 	}
-
+	
 	public int getSum() {
 		// this.sum = sum;
 		// System.out.println("[sum]" + sum);
 		return sum;
-	}
+	}	//getSum값 리턴으로 부르게 함.
 
-	public void call_Name() {
-		System.out.println("ddd");
-		//다시짜기 근데 리턴할떄 뭔가를 추가해서 넣어주거나 받아올떄 무슨 장치같은걸만든 다음에 꼬아서 받아와보기
+	public void call_Name() {	//int값을 홀짝으로 해서 홀수번 번입니다 
+		DataName dataName = new DataName();
+		dataName.getKey();
+		System.out.println("┌ <getKey - 번호데이터 받아주기> ┐");
+		System.out.println(dataName.getKey());
+		
 	}
 
 	// 해주고 싶은것 관리자 이름 + 숫자키 = 배열 만들어서 양수 음수 나눠서 => 음수 양수 따라서 사람찾기
 	// 언제등록했는지도 적어주고싶음
 	public void input_Name() { // 0을 치면 바로 빠져나가기
+		ArrayList<DataName> List = new ArrayList<>();	//리스트생성
 		DataName dataName = new DataName();
 		System.out.println("관리자 이름을 넣어주세요. 숫자를 입력하세요");
 		boolean on = true;
 		boolean off = false;
 		String zero = "0";
-		while(on) {
+		while (on) {
 			String master_name = sc.next();
 			if (master_name.equals(zero)) {
 				on = off;
 				break;
 			}
 			int number = sc.nextInt();
-			dataName.setData(master_name,number);	//값축척되게 수정하기
+			this.ArrayName(master_name);	//ArrayName값 전달
+			this.ArrayKey(number);
+			System.out.println("<값전달 완료>");
+			dataName.setData(master_name, number); // 값축척되게 수정하기
 		}
-		dataName.getData();
-	}	//실행
+		System.out.println("┌ ArrayRandom > dataName.getData 호출 ┐");
+		System.out.println(dataName.getData());
+	} // 실행
 	
-//	public 
+	public String ArrayName(String input_master_name) {	//이름만 전달
+		DataName dataName = new DataName();
+		dataName.setName(input_master_name);
+		System.out.println("input_master_name > " + input_master_name);
+		return input_master_name;
+	}
+	
+	public int ArrayKey(int input_number) {	//번호만 전달
+		DataName dataName = new DataName();
+		dataName.setKey(input_number);
+		System.out.println("input_number > " + input_number);
+		return input_number;
+	}
+	
+	
 }

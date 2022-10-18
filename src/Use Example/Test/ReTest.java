@@ -4,6 +4,9 @@ public class ReTest {
 	public static void main(String[] args) {
 		ReTest test = new ReTest();	//메인 클래스 객체 만들고
 		test.testMethod(300);	//객체변수이름.파라미터넣고싶은 메소드 ( 파라미터) ;
+	
+		ReTest2 rt = new ReTest2();
+		
 	}
 	
 	public void testMethod(int age) { //메소드 만들고 파라미터로 이거 받아여~ 공고
@@ -11,6 +14,7 @@ public class ReTest {
 	}
 	
 	public void returning_Test() {
-		
 	}
-}		//근데 이게 리턴임???? 걍 값 받는거넹
+	
+
+}		
