@@ -9,7 +9,7 @@ public class ArrayStudy {
 		
 		DataName Test0 = new DataName();
 		Test0.timeStamp();
-		
+		Test0.ArrayKey();
 	}
 }
 
