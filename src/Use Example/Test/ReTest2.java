@@ -17,4 +17,8 @@ public class ReTest2{
 		Name();
 		System.out.println("Line2");
 	}
+	
+	public void Annotation_Test() {
+		@Ano(element1 = "값", element2=6);
+	}
 }

@@ -212,17 +212,17 @@ public class ArrayRandom {
 	public void ArrayKey() { // 번호만 전달, 번호 안담김 DataName에서 가져와야함.
 		//그냥 해쉬 맵을 통쨰로 들고와야하나. 아마 리스트 값을 여기로 넘겨줘서 받아서 해야할듯 
 		//파라미터로하면 main에서 못부름 값을 받아야하는데 그 값을 받을 값이 없다.
+		System.out.println("ArrayKey 호출함");
+		DataName one = new DataName();
 		
+	}	
 		
-		
-	}
-	
 	public void odd_ArrayKey() { // 매개변수받지않고 호출 
 		//아니그럼 hashmap의 값을 꺼내서 int return해서 저어쪽 findDefalt(int print_type)호출
 		DataName Test = new DataName();
 		System.out.println((Test.getKey())); 	//아니일단 해봐 값이 어디로 가는거니.. 물길이 어디니 왜 없니.. 왜 안해줘..
 		System.out.println("출력");
-		
 	}
-
+	
+	
 }

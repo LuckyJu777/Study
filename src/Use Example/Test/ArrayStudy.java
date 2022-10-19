@@ -8,8 +8,12 @@ public class ArrayStudy {
 		Masterkey.input_Name();
 		
 		DataName Test0 = new DataName();
-		Test0.timeStamp();
-		Test0.ArrayKey();
+//		Test0.timeStamp();
+		Test0.setArrayKey();
+		
+		DataName nt = new DataName();
+//		nt.print(null, null);
+		System.out.println("잠와요");
 	}
 }
 

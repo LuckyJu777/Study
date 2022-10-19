@@ -4,9 +4,10 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map.Entry;
+import java.util.Iterator;
 
-public class DataName {
+
+public class DataName {		//getter , setter
 	private HashMap<String, Integer> map = null;
 	private ArrayList<HashMap<String, Integer>> list = new ArrayList<HashMap<String, Integer>>();
 	private String Name; // 왜 낭비인지 잘 모르겠다. > 해결
@@ -70,9 +71,13 @@ public class DataName {
 		}
 	}
 	
-	public void ArrayKey() {
-		//KeySet() 활용, hashmap의 key만 출력하게.
-		
-		
-		}
+	public void ArrayKeyset(HashMap<String,Integer> map) {
+		//KeySet() 활용, hashmap의 key만 출력하게. hasNext(): 다음 요소에 읽어 올 요소가 있는지 확인 하는 메소드 있으면 true, 없으면 false 를 반환
+		//list.add(map)하면되는데 누가 넘겨주냐고
+		Iterator<String> keys = map.keySet().iterator();
+        while (keys.hasNext()){
+            String key = keys.next();
+            System.out.println("KEY : " + key); // Key2 , Key1, Key4, Key3, Key5
+        }
+	}
 }
