@@ -1,5 +1,9 @@
 package Test;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -78,6 +82,13 @@ public class DataName {		//getter , setter
         while (keys.hasNext()){
             String key = keys.next();
             System.out.println("KEY : " + key); // Key2 , Key1, Key4, Key3, Key5
-        }
+        }   
+	}
+	
+	@Target({ElementType.METHOD})		//Target은 메소드에만 적용 @Retention은 런타임까지 어노테이션 정보를 유지하도록
+	@Retention(RetentionPolicy.RUNTIME)	//Retention은 런터임시까지 어노테이션정보를 유지하도록 
+	public @interface PrintA{	//기본엘리먼트는 value는 구분석ㄴ에 사용될 문자 number는 반복횟수이다. 
+		String value() default "-";		//디폴트값으로 - 15 를 주었다. 
+		int number() default 15;
 	}
 }

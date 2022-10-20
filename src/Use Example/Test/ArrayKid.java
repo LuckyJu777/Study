@@ -1,8 +1,12 @@
 package Test;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.ArrayList;
 
-public class ArrayKid extends ArrayRandom {	//상속 및 내부클래스 Test
+class ArrayKid extends ArrayRandom {	//상속 및 내부클래스 Test
 	public void arrayKid_call() {
 		System.out.println("<arrayKid_call을 호출합니다.>");	
 		}
@@ -20,6 +24,7 @@ public class ArrayKid extends ArrayRandom {	//상속 및 내부클래스 Test
 			ArrayKid kid = new ArrayKid();
 			ArrayKid.ArrayKid_List kid2 = kid.new ArrayKid_List();
 		}
+		
 	}
 	
 	class ArrayKid_odd {
@@ -34,8 +39,9 @@ public class ArrayKid extends ArrayRandom {	//상속 및 내부클래스 Test
 			
 		}	
 	}
-	
-	public interface ArrayKid_I {public abstract void Animalstr();}
+	//enum > 열거
+	@Deprecated		
+	static interface ArrayKid_I {public abstract void Animalstr();}
 	interface Inter{
 		public static final String ddd = "나비";
 		public abstract String Animalstr(String ddd);
@@ -51,6 +57,6 @@ public class ArrayKid extends ArrayRandom {	//상속 및 내부클래스 Test
 			String rabbit = "토끼";
 			
 			System.out.println("<interface ArraySet의 Animalstr 을 호출합니다.>");
-		} 
+		}
 	}
 }

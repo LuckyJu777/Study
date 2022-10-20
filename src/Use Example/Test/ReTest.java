@@ -1,5 +1,10 @@
 package Test;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
 public class ReTest {
 	public static void main(String[] args) {
 		ReTest test = new ReTest();	//메인 클래스 객체 만들고
@@ -21,8 +26,15 @@ public class ReTest {
 		
 		method(--n);
 	}
+	
+	@Target({ElementType.METHOD})		//Target은 메소드에만 적용 @Retention은 런타임까지 어노테이션 정보를 유지하도록
+	@Retention(RetentionPolicy.RUNTIME)	//Retention은 런터임시까지 어노테이션정보를 유지하도록 
+	public @interface PrintA{	//기본엘리먼트는 value는 구분석ㄴ에 사용될 문자 number는 반복횟수이다. 
+		String value() default "-";		//디폴트값으로 - 15 를 주었다. 
+		int number() default 15;
+	}										//
 	//클래스 메서드 , 인스턴스 메서드
 	//클래스를 정의 할 때 어떤 경우에 static을 사용해서 정의해야할까
 	//객체 매서드는 인스턴스 변수와 관련된 작업을 하는 메서드의 작업을 수행하는데 인스턴스 변수를 필요로 하는 메서드
-	//인스턴스 변수는 인스턴스를 생성해야만 만들어지므로 클래스 메서드 static메서드로 정의
-	}	
+	//인스턴스 변수는 인스턴스를 생성해야만 만들어지므로 클래스 메서드 static메서드로 정의	
+}

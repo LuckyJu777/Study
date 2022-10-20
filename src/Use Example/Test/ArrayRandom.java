@@ -1,10 +1,12 @@
 package Test;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayRandom {
+
 	private ArrayList<Integer> List = null;
 	private ArrayList<Integer> odd_Array = null;
 	private ArrayList<Integer> even_Array = null;
@@ -16,6 +18,24 @@ public class ArrayRandom {
 	private static int odd_sum = 0;
 	private static int even_sum = 0; // even이 홀수야
 
+	final String iv = "fianl iv";
+	static String v = "static v";
+
+	public void call() {
+		max();
+	}
+	
+	public void copyArray() {
+		System.out.println();
+		int[] oldA = {1,2,3,4,5,6,7,8,9,10};
+		int[] newB = new int[4];
+		
+		System.arraycopy(oldA ,0 ,oldA ,0 , oldA.length);
+		for(int i= 0; i<newB.length; i++) {
+			System.out.println(newB[i]+", ");
+		}
+	}
+	
 	public ArrayRandom() {
 		List = new ArrayList<Integer>();
 		odd_Array = new ArrayList<Integer>();
@@ -23,7 +43,46 @@ public class ArrayRandom {
 		sc = new Scanner(System.in);
 		rd = new Random();
 	}
-
+	
+	@SafeVarargs
+	public void max(){		//for문 최대값
+		int max = 0;
+		int[] array = {11,3,4,5,77,143,22};
+		int size = array.length;
+		for(int i = 0; i<size; i++) {
+				if(array[i] > max) {
+					max = array[i];	//한번더 담아줌
+				}
+			}
+		System.out.println("max: " + max);
+	}
+	
+//	public void Annotation() { //대체 이건 뭐때문에 이렇게 쓴거에요?
+//		Method[] declaredMethods= DataName.class.getDeclaredMethods();
+//		
+//		//Method 객체를 하나씩 처리
+//		for(Method method:declaredMethods) {
+//			if(method)) {
+//				printAnnotation printAnnotation = method.getAnnotatedExceptionTypes().Annotation(PrintAnnotation.class);
+//				
+//				System.out.println("[" + method.getName() + "]");
+//				
+//				for(int i = 0; i<printA.number(); i++) {
+//					System.out.print(printAnnotation.value());
+//				}
+//				System.out.println();
+//				
+//				try {
+//					method.invoke(new DataName());
+//				}catch (Exception e) {} 
+//				System.out.println();
+//				}
+//			}
+//		}
+//	}
+//
+//
+//-------------------------------------------------------------------------------------------------->
 	public void inputNumber() { // N개의 랜덤함수를 입력받고 > 무작위로 수 넣어주기 (난수생성)
 		System.out.println("N개의 랜덤함수");
 		int enterNum = sc.nextInt();
@@ -197,6 +256,7 @@ public class ArrayRandom {
 			int number = sc.nextInt();
 			System.out.println("<값전달 완료>");
 			dataName.setData(master_name, number); // 값축척되게 수정하기
+
 		}
 		System.out.println("┌ ArrayRandom > dataName.getData 호출 ┐");
 		System.out.println(dataName.getData());
@@ -210,19 +270,24 @@ public class ArrayRandom {
 	}
 
 	public void ArrayKey() { // 번호만 전달, 번호 안담김 DataName에서 가져와야함.
-		//그냥 해쉬 맵을 통쨰로 들고와야하나. 아마 리스트 값을 여기로 넘겨줘서 받아서 해야할듯 
-		//파라미터로하면 main에서 못부름 값을 받아야하는데 그 값을 받을 값이 없다.
+		// 그냥 해쉬 맵을 통쨰로 들고와야하나. 아마 리스트 값을 여기로 넘겨줘서 받아서 해야할듯
+		// 파라미터로하면 main에서 못부름 값을 받아야하는데 그 값을 받을 값이 없다.
 		System.out.println("ArrayKey 호출함");
 		DataName one = new DataName();
-		
-	}	
-		
-	public void odd_ArrayKey() { // 매개변수받지않고 호출 
-		//아니그럼 hashmap의 값을 꺼내서 int return해서 저어쪽 findDefalt(int print_type)호출
+
+	}
+
+	public void odd_ArrayKey() { // 매개변수받지않고 호출
+		// 아니그럼 hashmap의 값을 꺼내서 int return해서 저어쪽 findDefalt(int print_type)호출
 		DataName Test = new DataName();
-		System.out.println((Test.getKey())); 	//아니일단 해봐 값이 어디로 가는거니.. 물길이 어디니 왜 없니.. 왜 안해줘..
+		System.out.println((Test.getKey())); // 아니일단 해봐 값이 어디로 가는거니.. 물길이 어디니 왜 없니.. 왜 안해줘..
 		System.out.println("출력");
 	}
-	
-	
+
+	class FindOut {
+		public String print(String A) {
+			System.out.println("ArrayRandom Class - classMethod_inclass Method - FindOut CLass - print method 를 실행> ");
+			return A;
+		}
+	}
 }
