@@ -84,11 +84,34 @@ public class DataName {		//getter , setter
             System.out.println("KEY : " + key); // Key2 , Key1, Key4, Key3, Key5
         }   
 	}
-	
+	public void role_play() {
+		System.out.println("<당신의 역할은 " + + " 입니다.>");
+	}
 	@Target({ElementType.METHOD})		//Target은 메소드에만 적용 @Retention은 런타임까지 어노테이션 정보를 유지하도록
 	@Retention(RetentionPolicy.RUNTIME)	//Retention은 런터임시까지 어노테이션정보를 유지하도록 
 	public @interface PrintA{	//기본엘리먼트는 value는 구분석ㄴ에 사용될 문자 number는 반복횟수이다. 
 		String value() default "-";		//디폴트값으로 - 15 를 주었다. 
-		int number() default 15;
+		}
+	
+	public interface role{	//인터페이스 
+		public default void cherry() {
+			System.out.println("체리");
+			
+		}
+		
+		public default void bear() {
+			System.out.println("곰");
+		}
+		
+		public default void police() {
+			System.out.println("경찰");
+		}
+	}
+	
+	public interface detailrole extends role{	//관리자 역할을 줄 수 있게 인터페이스로 만들어보자
+		public default void collector() {
+	
+			
+		}
 	}
 }

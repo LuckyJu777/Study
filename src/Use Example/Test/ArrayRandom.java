@@ -44,7 +44,6 @@ public class ArrayRandom {
 		rd = new Random();
 	}
 	
-	@SafeVarargs
 	public void max(){		//for문 최대값
 		int max = 0;
 		int[] array = {11,3,4,5,77,143,22};
@@ -289,5 +288,6 @@ public class ArrayRandom {
 			System.out.println("ArrayRandom Class - classMethod_inclass Method - FindOut CLass - print method 를 실행> ");
 			return A;
 		}
+	//인터페이스 구현 객체 만들기 
 	}
 }
