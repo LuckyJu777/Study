@@ -1,17 +1,17 @@
 package Six;
 
 public class MemberDao {
-	
+
 	private String name;
 	private String id;
 	private String password;
 	private int age;
-	
-	MemberDao(){
-		
+
+	MemberDao() {
+
 	}
-	
-	MemberDao(String name){
+
+	MemberDao(String name) {
 		this.name = name;
 	}
 
@@ -20,14 +20,14 @@ public class MemberDao {
 		this.id = id;
 		// TODO Auto-generated constructor stub
 	}
-	
+
 //	MemberDao(String name, String id, String password){
 //		this.name = name;
 //		this.id = id;
 //		this.password = password;
 //	}	
-	
-	MemberDao(String name, String id, String password){
+
+	MemberDao(String name, String id, String password) {
 		this.setName(name);
 		this.setId(id);
 		this.setPassword(password);
@@ -36,37 +36,33 @@ public class MemberDao {
 	public String getName() {
 		return name;
 	}
-	
+
 	public String getId() {
 		return id;
 	}
-	
+
 	public String getPassword() {
 		return password;
 	}
-	
+
 	public int getAge() {
 		return age;
 	}
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
-	
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
-	
-	
-	
-	
 
 }

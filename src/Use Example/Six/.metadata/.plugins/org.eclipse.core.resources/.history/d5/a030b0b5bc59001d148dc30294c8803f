@@ -1,0 +1,20 @@
+package Six;
+
+public class KbSender extends ContentSender {
+	String content;
+
+	public KbSender(String bank, String name, String content) {
+		super(bank, name);
+		this.content = content;
+	}	
+
+	@Override
+	public void sendMsg(String recipient) {
+		System.out.println("국민은행=" + this.bank);
+		System.out.println("이름=" + this.name);
+		System.out.println("내용=" + this.content);
+		System.out.println("받는 사람=" + recipient);
+
+	}
+
+}
