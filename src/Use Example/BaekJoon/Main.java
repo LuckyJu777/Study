@@ -1,16 +1,27 @@
 package BaekJoon;
 
-public class Main{
-	public static void main(String[] args) {
-      String s = "         ,r'\"7" +
-    		     "r`-_   ,'  ,/ "+
-    		     "  \\. \". L_r'"+
-    		   	 "   `~\\/ "+
-    		     "      |"+
-    		  	 "      |";
-	System.out.println(s);
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String s = br.readLine();  //단어 입력받기
+		System.out.print(s.length());
 	}
 }
+
+//public class Main{
+//	public static void main(String[] args) {
+//      String s = "         ,r'\"7" +
+//    		     "r`-_   ,'  ,/ "+
+//    		     "  \\. \". L_r'"+
+//    		   	 "   `~\\/ "+
+//    		     "      |"+
+//    		  	 "      |";
+//	System.out.println(s);
+//	}
+//}
 
 //1001번
 //import java.util.Scanner;
