@@ -3,13 +3,30 @@ package BaekJoon;
 import java.io.*;
 import java.util.*;
 
+import java.util.Scanner;
+
 public class Main {
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String s = br.readLine();  //단어 입력받기
-		System.out.print(s.length());
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+
+        for (int i = 0 ; i < N ; i++) {
+            String a = sc.next();
+            int l = a.length();
+            String f_c = String.valueOf(a.charAt(0));
+            String l_c = String.valueOf(a.charAt(l-1));
+            System.out.println(f_c+l_c);
+        }
+    }
 }
+
+//public class Main {
+//	public static void main(String[] args) throws IOException {
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		String s = br.readLine();  //단어 입력받기
+//		System.out.print(s.length());
+//	}
+//}
 
 //public class Main{
 //	public static void main(String[] args) {
