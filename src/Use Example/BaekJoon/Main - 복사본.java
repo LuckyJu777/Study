@@ -1,26 +1,32 @@
 package BaekJoon;
 import java.util.Scanner;
 public class Main{
-	public static void main(String[] args) {
-				Scanner in = new Scanner(System.in);
-
-				int N = in.nextInt();
-				int X = in.nextInt();
-				int arr[] = new int[N];
-
-				for (int i = 0; i < N; i++) {
-					arr[i] = in.nextInt();
-				}
-
-				in.close();
-
-				for (int i = 0; i < N; i++) {
-					if (arr[i] < X) {
-						System.out.print(arr[i] + " ");
-					}
-				}
+			public static void main(String[] args) throws IOException {
+				BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+				String s = br.readLine();  //단어 입력받기
+				System.out.print(s.length());
 			}
 		}
+	}
+//				Scanner in = new Scanner(System.in);
+//
+//				int N = in.nextInt();
+//				int X = in.nextInt();
+//				int arr[] = new int[N];
+//
+//				for (int i = 0; i < N; i++) {
+//					arr[i] = in.nextInt();
+//				}
+//
+//				in.close();
+//
+//				for (int i = 0; i < N; i++) {
+//					if (arr[i] < X) {
+//						System.out.print(arr[i] + " ");
+//					}
+//				}
+//			}
+//		}
 
 //      String s = "         ,r'\"7" +
 //    		     "r`-_   ,'  ,/ "+
