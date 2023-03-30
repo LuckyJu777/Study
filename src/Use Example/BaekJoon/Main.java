@@ -6,19 +6,40 @@ import java.util.*;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
 
-        for (int i = 0 ; i < N ; i++) {
-            String a = sc.next();
-            int l = a.length();
-            String f_c = String.valueOf(a.charAt(0));
-            String l_c = String.valueOf(a.charAt(l-1));
-            System.out.println(f_c+l_c);
+    public class Main {
+        public static void main(String[] args) {
+
+            Scanner sc = new Scanner(System.in);
+
+            int total =  sc.nextInt();
+            int count = sc.nextInt();
+
+            for(int i = 0; i< count; i++){
+                int price = sc.nextInt();
+                int num = sc.nextInt();
+
+                total = total - (price * num);
+            }
+
+            if(total == 0) System.out.println("Yes");
+            else System.out.println("No");
+
+
         }
-    }
 }
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int N = sc.nextInt();
+//
+//        for (int i = 0 ; i < N ; i++) {
+//            String a = sc.next();
+//            int l = a.length();
+//            String f_c = String.valueOf(a.charAt(0));
+//            String l_c = String.valueOf(a.charAt(l-1));
+//            System.out.println(f_c+l_c);
+//        }
+//    }
 
 //public class Main {
 //	public static void main(String[] args) throws IOException {
