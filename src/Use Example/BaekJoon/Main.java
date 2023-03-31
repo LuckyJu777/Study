@@ -9,24 +9,41 @@ public class Main {
 
     public class Main {
         public static void main(String[] args) {
+                    Scanner sc = new Scanner(System.in);
+                    int H = sc.nextInt(); //시
+                    int M = sc.nextInt(); //분
+                    sc.close();
+                    int B = 45;
 
-            Scanner sc = new Scanner(System.in);
-
-            int total =  sc.nextInt();
-            int count = sc.nextInt();
-
-            for(int i = 0; i< count; i++){
-                int price = sc.nextInt();
-                int num = sc.nextInt();
-
-                total = total - (price * num);
+                    if(M<45){
+                        M += 15;
+                        if(H == 0){
+                            H = 23;
+                        } else {
+                            H -= 1;
+                        }
+                    } else {
+                        M -= 45;
+                    }
+                    System.out.println(H +" "+ M);
+                }
             }
-
-            if(total == 0) System.out.println("Yes");
-            else System.out.println("No");
-
-
-        }
+            
+//            Scanner sc = new Scanner(System.in);
+//
+//            int total =  sc.nextInt();
+//            int count = sc.nextInt();
+//
+//            for(int i = 0; i< count; i++){
+//                int price = sc.nextInt();
+//                int num = sc.nextInt();
+//
+//                total = total - (price * num);
+//            }
+//
+//            if(total == 0) System.out.println("Yes");
+//            else System.out.println("No");
+//        }
 }
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
