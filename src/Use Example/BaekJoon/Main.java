@@ -28,7 +28,7 @@ public class Main {
                     System.out.println(H +" "+ M);
                 }
             }
-            
+
 //            Scanner sc = new Scanner(System.in);
 //
 //            int total =  sc.nextInt();
