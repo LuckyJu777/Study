@@ -6,27 +6,42 @@ import java.util.*;
 import java.util.Scanner;
 
     public class Main {
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            final int N = sc.nextInt();
+        public static void main(String[] arg) {
+        Scanner sc = new Scanner(System.in);
+        int H = sc.nextInt();
+        int M = sc.nextInt();
+        int CookTime = sc.nextInt();    //요리하는데 주어진 시간
+        sc.close();
+        //        1. A(시)와 B(분)을 하나의 분으로 변환한 뒤, C를 더하고 나온 결과 값을 다시 시와 분 으로 변환하는 방법
+        int min = H * 60 + M;
+        min = min + CookTime;
 
-            for(int i = 1; i <= N ; i++) {
-                for(int j = 0; j < N-i; j++)
-                    System.out.print(" ");
-                for(int j = 0; j < i*2-1; j++)
-                    System.out.print("*");
-                System.out.println();
-            }
+        int hour = (min / 60) % 24;    //시
+        int minute = min % 60;      //분
 
-            for(int i = N-1; i >= 0 ; i--) {
-                for(int j = 0; j < N-i; j++)
-                    System.out.print(" ");
-                for(int j = 0; j < i*2-1; j++)
-                    System.out.print("*");
-                System.out.println();
-            }
-        }
-        }
+        System.out.println(hour +" "+ minute);
+    }
+}
+//        public static void main(String[] args) {
+//            Scanner sc = new Scanner(System.in);
+//            final int N = sc.nextInt();
+//
+//            for(int i = 1; i <= N ; i++) {
+//                for(int j = 0; j < N-i; j++)
+//                    System.out.print(" ");
+//                for(int j = 0; j < i*2-1; j++)
+//                    System.out.print("*");
+//                System.out.println();
+//            }
+//
+//            for(int i = N-1; i >= 0 ; i--) {
+//                for(int j = 0; j < N-i; j++)
+//                    System.out.print(" ");
+//                for(int j = 0; j < i*2-1; j++)
+//                    System.out.print("*");
+//                System.out.println();
+//            }
+//        }
 //                    Scanner sc = new Scanner(System.in);
 //                    int H = sc.nextInt(); //시
 //                    int M = sc.nextInt(); //분
