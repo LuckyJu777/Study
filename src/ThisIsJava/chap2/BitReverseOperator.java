@@ -4,6 +4,7 @@ public class BitReverseOperator{
 		int v1 = 10;
 		int v2 = ~v1; //10 비트를 반전
 		int v3 = ~v1 + 1; // 반전한걸 + 1
+
 		System.out.println(toBinaryString(v1) + "(십진수: " + v1 + ")");
 		System.out.println(toBinaryString(v2) + "(십진수: " + v2 + ")");
 		System.out.println(toBinaryString(v3) + "(십진수: " + v3 + ")");
