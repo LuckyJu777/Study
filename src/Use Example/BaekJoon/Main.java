@@ -16,7 +16,6 @@ import java.util.Scanner;
                     break;
                 }
                 System.out.println(A + B);
-            }
         }
 //        Scanner sc = new Scanner(System.in);
 //        int H = sc.nextInt();
