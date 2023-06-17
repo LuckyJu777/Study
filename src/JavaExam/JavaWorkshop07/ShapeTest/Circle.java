@@ -1,4 +1,4 @@
-//TODO 근데 널값 뜸 
+//TODO 근데 널값 뜸
 public class Circle extends Shape implements Mobable{
     int x;
     int y;
