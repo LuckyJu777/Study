@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    function xxx(){
+      location.reload();	// 현재화면 리로딩
+    }
+    function yyy(){
+      location.href="target.html";	// 페이지 이동
+    }
+    function target2() {
+      document.getElementById("myForm").action="target2.html";
+    }<!-- form에서는 submit이벤트가 발생되고 , 데이터를 넘기는 유일한 방법은 action사용임 -->
+    function target3() {
+      event.preventDefault();	// submit 이벤트 정지 후 페이지 이동 단 데이터 전달안됨
+      location.href="target2.html"
+    }
+  </script>
+</head>
+<body>
+  폼 밖 <br>
+
+  <button onclick = "xxx()"> reload</button><br>
+  <a href = "javascript:yyy()"> target.html</a><br>
+  <button onclick="yyy()">버튼 target.html</button><br>
+  <button onclick="location.href='target.html'">location.href='target.html'</button><br>
+  <button onclick="location.href='target2 .html'">location.href='target.html'</button><br>
+  <hr>
+
+  <form id = "myForm">
+    <input type="text" name = "userid"><br>
+    <button onclick = "target2()"> target2.html</button>
+    <!-- 안될데이터 -->
+    <button onclick = "location.href = 'target2.html'"> location.href='target2.html'</button>
+    <button onclick = "target3()"> target3()</button><br>
+    <button>전송</button>
+
+    <!-- from 에서 발생한 이벤트는 submit 함수안 event.preventdefault 를 쓰면 데이터 안넘어감. location.href="페이지" 페이지 넘기기  -->
+
+  </form>
+
+</body>
+</html>
