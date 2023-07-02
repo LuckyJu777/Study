@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+  function plus(n) {
+    console.log("n=====", n);
+    var v1 = document.getElementById("v1").value;
+    var v2 = document.getElementById("v2").value;
+    var result = document.getElementById("result");//태그
+    result.value = parseInt(v1) + parseInt(v2);
+    //  document.getElementById("result").value =
+    //    parseInt(document.getElementById("v1").value) +
+    //    parseInt(document.getElementById("v2").value)
+
+  }
+  function minus() {
+    var v1 = document.getElementById("v1").value;
+    var v2 = document.getElementById("v2").value;
+    var result = document.getElementById("result");
+    result.value = parseInt(v1) - parseInt(v2);
+  }
+  function multiply() {
+    var v1 = document.getElementById("v1").value;
+    var v2 = document.getElementById("v2").value;
+    var result = document.getElementById("result");
+    result.value = parseInt(v1) * parseInt(v2);
+  }
+  function divide() {
+    var v1 = document.getElementById("v1").value;
+    var v2 = document.getElementById("v2").value;
+    var result = document.getElementById("result");
+    result.value = parseInt(v1) / parseInt(v2);
+  }
+  </script>
+</head>
+  <body>
+  <input type="text" name="val1" id="v1">
+  <br>
+  <input type="text" name="val2" id="v2">
+  <br>
+  <button onclick="plus(aaaaa)">
+    +
+  </button>
+  <button onclick="minus()">
+    -
+  </button>
+  <button onclick="multiply()">
+    *
+  </button>
+  <button onclick="divide()">
+    /
+  </button>
+  <br> 결과값 <input type="text" name="resultval" id="result">
+  </body>
+</html>
