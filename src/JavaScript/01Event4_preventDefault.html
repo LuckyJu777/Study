@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    function xxx(){
+      alert("호출");
+    }
+    function xxx2(){
+      var id = document.getElementById("userid2").value;
+      var passwd = document.getElementById("passwd2").value;
+      var result = false;
+      if(id.length>=3 && passwd.length != 0){
+        result = ture;
+      } else {
+        result = false;
+        alert("xxx2 error");
+      }
+      return result;	// false를 적어주고
+    }
+
+    function xxx3(){
+      var id = document.getElementById("userid3").value;
+      var passwd = document.getElementById("passwd3").value;
+      if(id.length>=3 && passwd.length != 0){
+        alert("xxx3 제출")
+      } else {
+        alert("xxx3 error");
+        event.preventDefault();	// 더이상 진행 못해
+      }
+
+    }
+
+    function xxx4(){
+      alert("호출");
+      event.preventDefault();	// 더이상 진행 못해
+    }
+  </script>
+</head>
+<body>
+  <form action="target.html" onsubmit="xxx()">
+    아이디======1<input type="text" name="userid"><br>
+    비번=======1<input type="text" name="passwd"><br>
+    <button>버튼</button><!--  xxx()호출 -->
+    <input type="submit" value="로그인">
+    <input type="reset" value="취소"><br>
+  </form>
+
+  <hr>
+  <hr>
+
+  <!-- 	<form action="target.html" onsubmit="return xxx2()">	return 적어주기 / 권장하지 않음
+          아이디======2<input type="text" name="userid2"><br>
+          비번=======2<input type="text" name="passwd2"><br>
+          <button>버튼</button> xxx()호출
+          <input type="submit" value="로그인">
+          <input type="reset" value="취소"><br>
+      </form>
+
+          <form action="target.html" onsubmit="xxx3()">
+          아이디======3<input type="text" name="userid" id="userid3"><br>
+          비번=======3<input type="text" name= "passwd" id="passwd3"><br>
+          <button>버튼</button>
+          <input type="submit" value="로그인">
+          <input type="reset" value="취소"><br>
+          </form>
+  -->
+  <form action="target.html" onsubmit="">	<!-- 안씀 -->
+    아이디======4<input type="text" name="userid" id="userid4"><br>
+    비번=======4<input type="text" name= "passwd" id="passwd4"><br>
+    <input type="submit" value="로그인">
+    <button onclick = "xxx4()">버튼</button>
+</form>
+</body>
+</html>
