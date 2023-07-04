@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DataType</title>
+  <script type="text/javascript">
+    var name = '홍길동';
+    var name = "홍길동"; //동일한 표기
+
+    var obj = {"username":"이순신","age":44};  //json 객체
+
+    var result = true;
+    var zzz = function(){} // 함수 객체 변수에 함수 저장 가능
+
+    var xxx = parseInt("123"); // Integer.parseInt(문자열) = parseInt(문자열)
+    console.log(xxx+10);  //형변환 하고 + 숫자를 적어주어야 int값으로 나온다.
+
+    var aaa = parseInt("hello");
+    console.log(aaa); //형변환 되지않음
+
+    var reslt = true; //boolean
+    var  xxx; //undefined
+    var kkk = null; //null
+    console.log( typeof name);  //String
+    console.log( typeof kkk); //object
+    console.log( typeof zzz); //function
+
+    var foo = { "name":"sss","age":120} // 객체에 없는 프로퍼티 접근은 undefined
+    console.log(">>> "+foo.name+'\t'+foo["name"]);  //첫번째 방법이나 두번째 방법으로 값을 꺼낼 수 있다.
+    console.log(">>> "+foo.age+'\t'+foo["age"]);  //첫번째 방법이나 두번째 방법으로 값을 꺼낼 수 있다.
+    console.log(foo[0]+"\t"+foo[1]);  //undefined undefined
+    console.log(foo.address); //undefined
+
+    var str = '{"name2":"홍길동","age2":"20","address2":"서울"}'; //문자열 형태 json ' { "" : "" } '
+    var jsonObj = JSON.parse(str); // 문자열 = > json으로 바꿔준다.
+    console.log(str,jsonObj);
+    console.log(jsonObj.name2, jsonObj.age2, jsonObj.address2); //값을 꺼내는 방법1
+    console.log(jsonObj["name2"], jsonObj["age2"], jsonObj["address2"]);  //값을 꺼내는 방법2
+
+    var str4 = JSON.stringify(jsonObj); //json obj => 문자열로 변환
+    console.log(str4, jsonObj);
+
+    var str2 = '["홍길동","이순신","유관순"]'; //서버에 접속하여 필요한 데이터를 JSON으로 받는다.
+    var jsonArr = JSON.parse(str2); //문자열 => json으로 변경되면
+    console.log(str2,jsonArr);
+    console.log(jsonArr[0],jsonArr[1],jsonArr[2]);  //TODO > json으로 변경되면 배열로 받을 수 있나?
+
+    for(var i in jsonArr){
+      console.log(">> " + jsonArr[i]);
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>
