@@ -23,7 +23,8 @@
     function show() { //json으로 파싱, div 태그 result 에 보여주기
       var str = ""; //받은 값 잘라서 넣어주기?  파싱해서 값 뽑기?>
       for (var i = 0; i<arr.length; i++) {
-        var jsonInfo = JSON.parse(arr[i]);  //TODO 문자열 파싱 실패 형이 안맞음 console찍어보기 이런 문자열' { "" : "" } '
+        var jsonInfo = JSON.parse(arr[i]);  //TODO 문자열 파싱 실패 형이 안맞음 console찍어보기 이런 문자열
+        // ' { "" : "" } '
         str += i + "번째 고객 <br> 이름 : "+ jsonInfo.id
                 + "<br> 나이 : " + jsonInfo.age
                 + "<br> 주소 : " + jsonInfo.address + "<br>"
