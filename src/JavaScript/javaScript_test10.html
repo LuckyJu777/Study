@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var arr = [];
+
+        // 객체 리터럴 표현을 반환하기 위해서는 함수 본문(body)을 괄호 속에 넣음:
+        function show2() {
+            var result ="<table border='1'>";
+            result +="<tr><td>번호</td><td>이름</td><td>나이</td><td>주소</td></tr>"
+            for (var i = 0; i < arr.length; i++) {
+                result += "<tr>";
+                var p = arr[i];
+                result += "<td>"+(i+1)+" 번째 고객</td>";
+                result +="<td>"+p.name+"</td>";
+                result +="<td>"+p.age+"</td>";
+                result +="<td>"+p.address+"</td>";
+                result+="</tr>";
+
+
+
+            }
+            result +=  "</table>";
+            document.getElementById("result").innerHTML = result;
+            console.log("--- 출력완료 ---");
+        }
+
+        function show() {
+            var result = "";
+            for (var i = 0; i < arr.length; i++) {
+                var p = arr[i];
+                console.log(">>>>>>>>>>>" + p);
+                result += (i + 1) + "번째 고객 <br> 이름 : " + p['name']
+                    + "<br> 나이 : " + p.age
+                    + "<br> 주소 : " + p.address + "<br>"
+                    + "===========================<br>";
+
+
+            }
+            console.log(result);
+            document.getElementById("result").innerHTML = result;
+            console.log("--- 출력완료 ---");
+        }
+
+        function save() { //저장 h4 뿌려주기 콘솔보기
+            var id = document.getElementById("username").value;
+            var age = document.getElementById("age").value;
+            var address = document.getElementById("address").value;
+            var info = {"name": id, "age": age, "address": address};
+
+            arr.push(info);
+
+            var end = "<h4>저장완료";
+            document.getElementById("result").innerHTML = end;
+            console.log("showList >>> " + info);
+        }
+
+
+    </script>
+</head>
+<body>
+
+<h3>JSON 객체</h3>  <!--JSON.parse 문자열 저장 후 파싱하기 -->
+
+이름<input type="text" name="username" id="username"><br>
+나이<input type="text" name="age" id="age"><br><br>
+주소<input type="text" name="address" id="address"><br>
+<button onclick="save()" id="saveBtn">저장</button>
+<br>
+<button onclick="show()" id="printBtn">출력</button>
+<br>
+<button onclick="show2()" id="printBtn2">테이블 출력</button>
+<br>
+<div id="result"></div>   <!-- 여기 출력변수-->
+
+</body>
+</html>
