@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>welcome join!!!</h2>
+<form action="/register" method="post">
+	<label>이름</label>
+	<input type="text" name="name"><br>
+	<label>주소</label>
+	<input type="text" name="address"><br>
+	<input type="submit" th:value="'회원가입'">
+	<input type="reset" value="취소">
+	
+</form>
+</body>
+</html>
