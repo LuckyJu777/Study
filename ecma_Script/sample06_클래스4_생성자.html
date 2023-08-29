@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //클래스 
+        class Person{
+            //생성자 이름 constructor
+            //생성자 : 단한개만 지정가능
+            //만일 생성자가 작성되지 않으면 기본생성자 생성됨
+            constructor(name, age){//생성자 
+                this.name=name;
+                this.age=age;
+            }
+            setName(name){
+                this.name=name;
+            }
+            setAge(age){
+                this.age=age;
+            }
+            getName(){
+                return this.name;
+            }
+            getAge(){
+                return this.age;
+            }
+        }//end class
+
+        var p = new Person("홍길동", 20);
+        console.log(p.getName());
+        console.log(p.getAge());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

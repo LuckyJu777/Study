@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //arrow함수 람다함수 
+        //1. 파라미터 없고 리턴값 없는 형식
+        function fun(){
+            console.log("fun()호출");
+        }
+        const x=()=>{console.log("arrow-fun()");};
+        const x2=() => console.log("arrow-fun()");
+        x();
+        x2();
+        ////////////////////////////////
+        //2. 파라미터 있고 리턴값 없는 형식
+        function fun2(n , n2){
+            console.log("fun2() ", n, n2);
+        }
+        const x3= (n, n2) => console.log("arrow-fun2: ", n, n2);
+        x3(1,2);
+        ////////////////////////////////////
+        //3. 파라미터 없고 리턴값 있는 형식
+        function fun3(){
+            return 100;
+        }
+        const x4= () => "arrow-fun3 : "+100; 
+        console.log(x4());
+        ///////////////////////////////////
+        //4. 파라미터 있고 리턴값이 있는 경우
+        function fun4(n, n2){
+            return n*n2;
+        }
+        const x5= (n, n2)=> n*n2;
+        console.log("func4 : ", x5(10,2));
+        const x6= (n, n2)=> {
+            console.log(n, n2);
+            return n*n2;
+        };
+        console.log("func6 : ", x6(1,2));
+
+        const x7 = x=> x*100;     //매개변수 1개인 경우 () 생략
+        console.log(x7(10));
+        /////////////////////////////////
+        //주의점 : arrow함수는 this바인딩 안됨, 
+        //arrow함수에서 this는 window객체임
+        //따라서 객체의 메서드를 생성할 때는 
+        //사용하지 않도록 한다.
+
+        var user={
+            n:999,
+            b:function(){
+                console.log(this, this.n); //n= 999
+            },
+            c:() => console.log(this, this.n)  //window객체, undefined
+        }
+        user.b();
+        user.c();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

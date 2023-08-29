@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //클래스: 프로퍼티 (멤버) 변수 선언 필요 없음
+        class Person{
+            setName(name){
+                this.name=name;
+            }
+            setAge(age){
+                this.age=age;
+            }
+
+            getName(){
+                return this.name;
+            }
+            getAge(){
+                return this.age;
+            }
+        }//end class
+
+        var p= new Person(); //객체 생성
+        p.setName("홍길동");
+        p.setAge(10);
+        console.log(p.getName());
+        console.log(p.getAge());
+        console.log(p.name);
+        console.log(p.age);
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

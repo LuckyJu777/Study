@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 사용자 정의 객체 
+        let address="서울"  //변수값을 객체에 사용 
+        let my="email"  //변수값이 객체의 키값이 됨 
+
+        var user={
+            username:"홍길동",
+            age:20,
+            address,  //address="서울"
+            [my]: "aaa@naver.com", //key 값을 변수로 설정함
+            getName: function(){
+                return this.username;
+            },
+            getAge: function(){
+                return this.age;
+            },
+            getAddress(){return this.address}  ///////////////
+        }; // end obj
+        
+        console.log(user);//한줄복사 단축키   shift+alt + 방향키 
+        console.log(user.username);//한줄복사 단축키 
+        console.log(user.age);//한줄복사 단축키 
+        console.log(user.address);
+        console.log(user.getName());
+        console.log(user.getAge());
+        console.log(user.getAddress());
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>

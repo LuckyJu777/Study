@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //파리미터 객체 분할 할당
+        //1. 배열 파라미터
+        function a([x,y]){
+            console.log("in function : ", x, y);
+        };
+        a([10, 20]);  
+        a([10]);//unde
+        //2. 배열 파라미터 
+        function a2([n, n2, n3=0]){
+            console.log("in function  a2: ", n, n2, n3);
+        };
+        a2([10, 20]);  //10, 20, 0 
+
+
+        //3. 객체 파라미터
+        function b({n, n2=0}){
+            console.log("in function b: ", n, n2);
+        };
+        b({n:99, n2:88});       // 99, 88
+        b({n:99, n10:88});   //0
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //template 리터럴
+        //1. 문자열 처리 방법
+        let s1="hello";
+        let s2='hello';
+        let s3=`hello`;//back-tick ``
+        console.log(s1, s2, s3);
+
+        //2. template 리터럴 용도
+        var name='hello2';
+        var s="<table> \
+                <tr>\
+                    <td>"+name + "</td>\
+                </tr>\
+                </table>";
+        console.log(s);
+
+
+
+
+
+
+        var s=` <table>
+                <tr>
+                    <td>${name}</td>
+                </tr>    
+                </table>
+                `;
+        console.log(s);
+        //////////////////////////
+        let aaa='홍길동';
+        let bbb=20;
+        let ccc='서울';
+
+
+
+
+        
+        let result=`이름은 : ${aaa}, 나이는: ${bbb}, 주소는 : ${ccc}`;
+        console.log(result);
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //다양한 함수 형식
+
+        //1. 기본함수 특징 -> 인자 갯수가 달라도 됨
+        function fun(n , n2, n3){
+            console.log(n, n2, n3);
+        }
+        fun();
+        fun(1);
+        fun(1,2);
+        fun(1,2,3);
+        ///////////////////////////
+        //2. default 파라미터
+        function fun2(n=-1, n2=-2, n3=-3){
+            console.log(n, n2, n3);
+        }
+        fun2();
+        fun2(1);  //-2,-3
+        fun2(1,2);  //-3
+        fun2(1,2,3);
+
+        ////////////////////
+        //3. rest 파리미터
+        function fun3(n, n2, ...rest){
+            console.log(n, n2, rest);
+        }
+        fun3(1,2,3,4,5); //1 2 (3) [3, 4, 5]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

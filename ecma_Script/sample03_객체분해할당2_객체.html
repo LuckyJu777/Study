@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //객체의 분할 할당
+        //1. 일반적인 객체 사용법
+        var obj={x:100 ,y:200};
+        var n= obj.x;
+        var n2= obj['y']; 
+        console.log(n, n2);
+
+        //2. 객체 분해  (이름의 통일) 중요!!!!!
+        var {x, y}= {x:1000, y:2000};
+        console.log(x, y);
+
+        var {x, y2}= {x:1000, y:2000};
+        console.log(x, y2); //undef
+        //3. default value
+        var {x, y2=0}={x:1000, y:2000};
+        console.log(x, y2);  //0 
+    
+        //4. 변수명의 변경
+        var {x:n, y:n2}= {x:1000, y:2000};
+        console.log(n, n2);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       //static함수 
+       class Person{
+        getPerson(){  //일반함수는 객체생성후사용
+            return "hello";
+        } 
+        static getXXX(){
+            return "world"; //static메소드는 클래스명, 메소드형식으로 참조
+        }
+       }
+       console.log(Person.getXXX());
+       let p= new Person();
+       console.log(p.getPerson());
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

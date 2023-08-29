@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //중첩함수의 사용
+
+       //1. 중첩함수 선언식
+       function x(arg){
+        function y(n){
+            return n*10;
+        }
+        return y(arg); //중첩함수 호출
+       }
+
+       //외부에서 접근방법
+       var result= x(3);
+       console.log(result);
+       /////////////////////////
+       //2. 중첩함수 표현식 
+       var a= function(arg){
+            var b= function(n){
+                return n*100;
+            }
+            return b(arg);
+       }
+       var result2= a(2);
+       console.log(result2);
+
+       ////////////////////////
+       //3. 은닉화 
+       var k= function(){
+        var d=10;
+        var k2= function(){
+            return d*2; 
+        }
+        return k2();
+       }
+
+       console.log("k()호출 :", k());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

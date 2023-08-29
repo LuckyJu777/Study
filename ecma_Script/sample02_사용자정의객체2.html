@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. 사용자 정의 객체 
+       var person ={
+        name:"홍길동",
+        "age":20,
+        parent:{
+            name:"홍대감",
+            job:"사또"
+        }
+       };//end person
+    
+       //중첩프로퍼트 접근
+
+        console.log(person.parent.name);//한줄복사 단축키   shift+alt + 방향키 
+       console.log(person['parent']['name'])
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
