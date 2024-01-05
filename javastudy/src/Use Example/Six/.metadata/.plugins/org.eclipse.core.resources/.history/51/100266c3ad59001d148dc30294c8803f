@@ -1,0 +1,40 @@
+package Six;
+
+public enum BankUser {
+	
+	User1("토스", "서수진", 4),
+	User2("국민", "김민니", 3),
+	User3("토스", "송우기", 10),
+	User4("국민", "박보람", 55);
+	
+	private final String bank;
+	private final String name;
+	private final int value;
+	
+	private BankUser(String bank, String name, int value) {
+		// TODO Auto-generated constructor stub
+		this.bank = bank;
+		this.name = name;
+		this.value = value;
+	}	
+
+	public String getName() {
+		return this.name;
+	}
+	
+	public int getValue() {
+		return this.value;
+	}
+	
+	public void printAllBankUser() {	
+		for (BankUser user : BankUser.values()) {
+			System.out.println(user.getName());
+		}
+	}
+	
+	public void printUserNumber(String putUser){
+		BankUser user1 = BankUser.User1;
+		System.out.println(user1.compareTo(BankUser.User4));
+
+	}
+}

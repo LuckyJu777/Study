@@ -1,0 +1,32 @@
+package Six;
+
+public class Member {
+	public static void main(String[] args) {
+		RandomNumber num = new RandomNumber();
+		num.inputNumber();
+		//홀짝배열
+		
+		Memberlogin membercontroller = new Memberlogin();
+		boolean result = membercontroller.login("hong", "12345");
+		if (result) {
+			System.out.println("로그인 되었습니다.");
+			membercontroller.logout("hong");
+		} else {
+			System.out.println("id 또는 password가 올바르지않습니다.");
+		}
+		//로그인 
+        
+        KbSender msgkb = new KbSender("국민", "김민니", "3$");
+        msgkb.sendMsg("조미연");
+        System.out.println();
+        
+//        ContentSender msgtoss1 = new ContentSender();
+//        msgtoss1.bank = "토스";
+//        msgtoss1.name = "송욱";
+//        System.out.println("enum : " + BankUser.User1);
+        
+//        ContentSender msgtoss1 = new TossSender("토스", "송우기", "10$");
+//        msgtoss1.sendMsg("전소연");
+        
+	}
+}

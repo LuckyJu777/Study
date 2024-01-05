@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>사원정보수정</h2>
+<form method="post">   <!-- action 주소는 post방식의  user/{id} 가 됨 -->
+<div th:object="${user}">
+	<input type="hidden" name="id" th:value="*{id}">
+	<table border="1">
+		<tr>
+			<th>아이디</th>
+			<th th:text="*{id}"></th>
+		</tr>
+		<tr>
+			<td>이름</td>
+			<td>
+				<input type="text" name="name" th:value="*{name}" th:placeholder="*{name}">
+			</td>
+		</tr>
+			<tr>
+			<td>주소</td>
+			<td>
+				<input type="text" name="address" th:value="*{address}" th:placeholder="*{address}">
+			</td>
+		</tr>
+			<tr>
+			<td><input  type="submit" value="update user"></td>
+			<td>
+				<input  type="reset" value="취소">
+			</td>
+		</tr>
+	</table>
+
+
+</div>
+</form>
+</body>
+</html>

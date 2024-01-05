@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mybatis.example.BlogMapper">
+
+    <select id="selectByDeptno"  parameterType = "int" resultType="com.dto.Dept">
+        select * from dept where deptno = #{deptno}
+    </select>
+
+    <select id="selectDetail" parameterType = "HashMap" resultType="com.dto.Dept">
+        select * from dept where dname = #{1} or dname = #{2}
+    </select>
+
+    <select id="selectAll" resultType="com.dto.Dept">
+        select * from dept
+    </select>
+
+    <!-- <insert id="deptInsert" parameterType="com.dto.Dept">
+            insert into dept (deptno, dname, loc) values (
+            #{deptno},
+            #{dname},
+            #{loc})
+        </insert>
+        -->
+
+    <update id="update" parameterType="com.dto.Dept">
+        update dept set dname = #{dname}, loc = #{loc} where deptno = #{deptno}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        delete from dept where deptno = #{i}
+    </delete>
+
+    <select id="multiSelectMap" parameterType="hashmap" resultType="Dept">
+        select deptno, dname, loc
+        from dept
+        where deptno In <!--  주의 -->
+        (#{key1}, #{key2})
+    </select>
+
+    <update id="multiUpdate" parameterType="arraylist">
+        update dept
+        set loc='제주'
+        where deptno IN
+        <foreach item="item" index="index" collection="list"
+                 open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </update>
+
+
+    <select id="multiSelect" parameterType="arraylist" resultType="Dept">
+        select deptno, dname, loc
+        from dept
+        where deptno In <!--  주의 -->
+        <foreach item="item" index="index" collection="list" open="("
+                 separator="," close=")">
+            #{item}
+        </foreach>
+
+    </select>
+</mapper>

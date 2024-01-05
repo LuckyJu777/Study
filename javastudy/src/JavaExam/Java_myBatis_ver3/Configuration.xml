@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration SYSTEM "https://mybatis.org/dtd/mybatis-3-config.dtd"
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN">
+
+<configuration>
+
+    <!-- jdbc.properties파일 등록-->
+
+
+    <properties resource="jdbc.properties"/>
+
+
+    -<environments default="development">
+
+
+    -<environment id="development">
+
+    <transactionManager type="JDBC"/>
+
+
+    -<dataSource type="POOLED">
+
+    <property value="${oracle.jdbc}" name="driver"/>
+
+    <property value="${oracle.url}" name="url"/>
+
+    <property value="${oracle.userid}" name="username"/>
+
+    <property value="${oracle.passwd}" name="password"/>
+
+    <!-- <property name="driver" value="oracle.jdbc.driver.OracleDriver" /><property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" /><property name="username" value="scott" /><property name="password" value="1234" /> -->
+
+
+</dataSource>
+
+</environment>
+
+</environments>
+
+    <!-- 매퍼 파일 경로 등록 , 파일이 존재해야 한다. src에 속해있으면 경로 안잡아도 됨 , 하위폴더는 /로 경로 표시-->
+
+
+
+    -<mappers>
+
+    <mapper resource="DeptMapper.xml"/>
+
+</mappers>
+
+</configuration>

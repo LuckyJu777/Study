@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    arr = [];
+
+    // 객체 리터럴 표현을 반환하기 위해서는 함수 본문(body)을 괄호 속에 넣음:
+    window.addEventListener('beforeunload', (event) => {
+      event.preventDefault();
+      event.returnValue = '';
+    })
+
+    window.onload = function() {
+      var sb = document.getElementById("saveBtn");
+      sb.addEventListener("click", save, false);
+
+      var pb = document.getElementById("printBtn");
+      pb.addEventListener("click", show, false);
+    }
+
+    function show() { //json으로 파싱, div 태그 result 에 보여주기
+      var str = ""; //받은 값 잘라서 넣어주기?  파싱해서 값 뽑기?>
+      for (var i = 0; i<arr.length; i++) {
+        var jsonInfo = JSON.parse(arr[i]);  //TODO 문자열 파싱 실패 형이 안맞음 console찍어보기 이런 문자열
+        // ' { "" : "" } '
+        str += i + "번째 고객 <br> 이름 : "+ jsonInfo.id
+                + "<br> 나이 : " + jsonInfo.age
+                + "<br> 주소 : " + jsonInfo.address + "<br>"
+                + "===========================<br>";
+      }
+      document.getElementById("result").innerHTML = str;
+      console.log(str);
+      console.log("--- 출력완료 ---");
+    }
+
+    function  showList() {  //콘솔에 보여주기 및 저장완료
+      var str = "<h4>저장완료";
+      document.getElementById("result").innerHTML = str;
+      for(var i = 0; i < arr.length; i++){
+        var arrs = arr[i];
+        console.log("showList >>> "+arrs);
+      }
+    }
+    function save() { //저장
+      var id = document.getElementById("username").value;
+      var age = document.getElementById("age").value;
+      var address = document.getElementById("address").value;
+      var info = [id,age,address];
+      if(id != null || age != null || address != null){
+        // 문자열 하나로 저장
+        arr.push(info);
+      } else {
+        alert("값을 입력해주세요.");
+      }
+
+      showList();
+    }
+
+
+  </script>
+</head>
+<body>
+<form method="submit">
+
+  <h3>JSON 객체</h3>  <!--JSON.parse 문자열 저장 후 파싱하기 -->
+
+  이름<input type="text" name="username" id="username"><br>
+  나이<input type="text" name="age" id="age"><br><br>
+  주소<input type="text" name="address" id="address"><br>
+  <button id = "saveBtn">저장</button><br>
+  <button id = "printBtn">출력</button><br>
+  <div id="result"></div>   <!-- 여기 출력변수-->
+
+
+</form>
+</body>
+</html>

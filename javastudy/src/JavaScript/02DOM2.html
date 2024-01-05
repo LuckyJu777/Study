@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script type="text/javascript">
+    function mySort(s) {
+      var arr = document.getElementById("v1").value;
+      var arr2 = arr.split(",");
+
+      for(var i=0; i<arr2.length; i++){
+        console.log(arr2[i]);
+      }
+
+      if(s == "asc"){
+        arr2.sort(
+                function (a,b){
+                  return a-b;
+                }
+        );
+      } else {
+        arr2.sort(descSort);
+      }
+      var result = document.getElementById("result");
+      result.value = arr2;	//id result 에 출력
+    }
+
+    function descSort(a,b){
+      return b-a;
+    }
+    /* split => 배열저장 => sort 오름 내림차순 결과 뿌려주기 */
+
+    /* function ascSort(a,b){
+        return a-b;
+    }
+
+    function descSort(a,b){
+        return b-a;
+    } */
+  </script>
+</head>
+<body>
+
+입력값<input type = "text" name = "arr" id ="v1" value = "1,2,3,4,5,6"><br>
+
+
+<button onclick="mySort('asc')">오름차순 정렬</button><br>
+<button onclick="mySort('desc')">내림차순 정렬</button><br>
+결과값<input type = "text" name = "arrResult" id ="result">
+</body>
+</html>

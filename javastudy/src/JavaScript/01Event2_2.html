@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    window.onload = init;
+
+    function init(){
+      console.log("init 호출");
+      // 이벤트를 적을 때 onclick => click 으로 on을 다 빼고
+      document.getElementById("xxx").addEventListener("click", function(e){
+        console.log("clicked");
+      }, false);
+
+      document.getElementById("xxx").addEventListener("mouseout", function(e) {
+        console.log("mouseout")
+      }, false);
+
+      document.getElementById("userid").addEventListener("keyup", test2,false);
+
+      document.getElementById("xyz").addEventListener("click", test3,false);
+
+      /* keyup,  */
+    }
+
+    function test() {
+      console.log("test mosueover");
+    }
+
+    function test2() {
+      console.log("test2 keyup"+this.value);
+    }
+
+    function test3() {
+      console.log("test3 screenX >>> "+event.screenX);	/* event */
+      console.log("test3 screenY >>> "+event.screenY);
+    }
+  </script>
+</head>
+</head>
+<body>
+  <!-- 이벤트 처리 코드가 없음 / 고전이벤트 처리방식 -->
+  <button id="xxx">클릭</button>
+  <input type="text" name="userid" id="userid">
+  <button id="xyz">이벤트 정보</button>
+</body>
+</html>

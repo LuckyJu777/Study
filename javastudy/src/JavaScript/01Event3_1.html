@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    window.onload = init;
+
+    function init(){
+      var imgs = documnet.getElementsByTagName("img");
+      for(var i = 0; i < imgs.length-1; i++){
+        var img = imgs[i];
+        img.onmouseover = function() {
+          console.log(imgs[3].src = this.src);
+        }
+      }
+    }
+
+  </script>
+</head>
+<body>
+<!-- 이벤트 처리 코드가 없음 / 고전이벤트 처리방식 -->
+  <table id = "myform" border = "1" >
+    <tr>
+      <th><img src = "../image/a.jpg" width = "100" heigth="100" id="img1"></th>
+      <th><img src = "../image/b.jpg" width = "100" heigth="100" id="img2"></th>
+      <th><img src = "../image/c.jpg" width = "100" heigth="100" id="img3"></th>
+    </tr>
+    <tr>
+      <th colspan='3'><img src = "../image/a.jpg" width = "300" heigth="300" id="img_m"></th>
+    </tr>
+  </table>
+</body>
+</html>

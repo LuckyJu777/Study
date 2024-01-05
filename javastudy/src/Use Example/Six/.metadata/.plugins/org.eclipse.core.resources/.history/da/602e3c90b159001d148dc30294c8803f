@@ -1,0 +1,63 @@
+package Six;
+//상속불가
+public enum BankUser{	
+//	String content;
+	User1("토스", "서수진", 4),
+	User2("토스", "송우기", 10),
+
+	private final String bank;
+	private final String name;
+	private final int value;
+	
+	private BankUser(String bank, String name, int value) {
+		this.bank = bank;
+		this.name = name;
+		this.value = value;
+	}	
+	
+	public String getBank() {
+		return this.bank;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public int getValue() {
+		return this.value;
+	}
+	
+
+	
+	public void printAllBankUser() {	
+		for (BankUser user : BankUser.values()) {
+			System.out.println(user.getName());
+		}
+	}
+	
+	public void printCompareUser(String putUser){
+		BankUser user1 = BankUser.User1;
+		System.out.println(user1.compareTo(BankUser.User2));
+
+	}
+}
+//	@Override
+//	public void sendMsg(String recipient) {
+//		System.out.println("국민은행=" + this.bank);
+//		System.out.println("이름=" + this.name);
+//		System.out.println("내용=" + this.content);
+//		System.out.println("받는 사람=" + recipient);
+//
+//	}
+//
+//	
+//	private final String bank;
+//	private final String name;
+//	private final int value;
+//	
+//	private BankUser(String bank, String name, int value) {
+//		// TODO Auto-generated constructor stub
+//		this.bank = bank;
+//		this.name = name;
+//		this.value = value;
+//	}	
