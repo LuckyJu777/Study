@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //함수 특징(일급객체)
+        function fun(){
+            console.log("fun();")
+        }
+
+        var x= fun; //1. 변수에 저장가능
+        x();
+        ////////////////////
+        function fun2(){
+            return fun; //2. 함수의 리턴 값으로 사용가능
+        }
+        var x= fun2(); 
+        x();
+        //////////////////////////////
+        function fun3(x){
+            x(); //3. 함수의 인자값으로 사용가능
+        }
+        fun3(fun); 
+        /////////////////////
+
+        //응용:콜백함수 
+        function call(x){
+            x();
+        }
+        function callback(){
+            console.log("collback()");
+        }
+        function callback2(){
+            console.log("collback()2");
+        }
+        call(callback);
+        call(callback2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

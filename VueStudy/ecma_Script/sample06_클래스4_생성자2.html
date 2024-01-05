@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //클래스 
+        class Vue1{
+            constructor({el, data, methods}){  //object를 인자로 받음
+                console.log(el,data, methods);
+                this.data=data;
+            }
+            getData(){
+                return this.data;
+            }
+        }//end class
+        var p = new Vue1({el:100, data:200, methods:300});
+        console.log(p.getData())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

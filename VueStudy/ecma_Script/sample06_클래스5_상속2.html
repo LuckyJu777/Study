@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       //상속
+       class Pet{
+        constructor(name, age){
+            this.name=name;
+            this.age=age;
+        }
+        info(){
+            return this.name+"\t"+this.age;
+        }
+       }//end parent
+       class Cat extends Pet{
+        constructor(name,age, sex){
+            super(name, age);
+            this.sex=sex;
+        }
+        info(){ //메소드 오버라이딩
+            return super.info()+"\t"+ this.sex;
+        }
+       }//end class
+       
+       var cat= new Cat("나비", 2, "암컷");
+       console.log(cat.info());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

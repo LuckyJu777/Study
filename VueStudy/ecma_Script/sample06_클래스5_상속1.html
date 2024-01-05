@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //상속
+        //2. 클래스기본
+        class Pet{
+            constructor(name, age){
+                this.name=name;
+                this.age=age;
+            }
+            setName(name){
+                this.name=name;
+            }
+            getName(){
+                return this.name;
+            }
+        };
+
+        class Cat extends Pet{
+            constructor(name, age,gender){
+                super(name, age);
+                this.gender=gender;
+            }
+        };
+
+        var cat= new Cat('고양이', 10, '암컷');
+        console.log(`${cat.name}, ${cat.getName()}`);
+        console.log(cat.age, cat.gender);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

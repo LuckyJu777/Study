@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.var 변수 
+        var n=10;
+        var n="홍길동";//변수명 중복가능
+        console.log(n);
+
+        if(true){
+            var x= 100;// 함수 scope
+        }
+        console.log(x);
+        for (var i = 0; i < 10; i++) {           
+            console.log("for i = ", i)
+        }
+        console.log(i);
+        ///////////////////////////
+        //2. 
+        console.log(m);  //undefined
+        var m=-10
+        console.log(m);
+        ////////////////////////////
+        //3. let변수 
+        let n2= 10;
+       // let n2="홍길동" //error
+        console.log(n2);
+        if(true){
+            let n3="hello";  //let blcok 변수 임 
+        }
+        // console.log(n3);//error   Uncaught ReferenceError: n3 is not defined
+
+        for (let j = 0; j< 10; j++) {           
+            console.log("for j = ", j)
+        }
+        // console.log(j);  //j is not defined
+         ////////////////////
+        //4.상수의 사용
+        const str="홍길동";
+       // str="aaa"  //Uncaught TypeError: Assignment to constant variable.
+        const mesg="hello";
+        try{
+            mesg="world";
+        }catch{
+            console.log("상수값 변경 불가");
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
